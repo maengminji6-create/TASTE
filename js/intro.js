@@ -35,6 +35,33 @@
   }
   burst.append(...pieces);
 
+  // 로고 주변에서 반짝이는 별
+  const sparkHolder = document.getElementById('introSparkles');
+  for (let i = 0; i < 14; i++) {
+    const s = document.createElement('i');
+    s.className = 'spark';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.setProperty('--s', 10 + Math.random() * 16 + 'px');
+    s.style.setProperty('--c', ['#F5D66C', '#D9C5EE', '#F4AEBB', '#B9DDC7'][i % 4]);
+    s.style.setProperty('--delay', 0.9 + Math.random() * 1.2 + 's');
+    sparkHolder.appendChild(s);
+  }
+
+  // 위에서 흩날리는 튤립 꽃잎
+  const petalHolder = document.getElementById('introPetals');
+  for (let i = 0; i < 22; i++) {
+    const p = document.createElement('i');
+    p.className = 'petal';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.setProperty('--s', 10 + Math.random() * 12 + 'px');
+    p.style.setProperty('--c', ['#F4AEBB', '#F6BBC6', '#D9C5EE', '#F5D66C', '#F6D5C5'][i % 5]);
+    p.style.setProperty('--t', 2.6 + Math.random() * 1.6 + 's');
+    p.style.setProperty('--sx', Math.random() * 120 - 60 + 'px');
+    p.style.setProperty('--delay', Math.random() * 1.4 + 's');
+    petalHolder.appendChild(p);
+  }
+
   intro.classList.add('is-playing');
 
   let done = false;
@@ -49,7 +76,7 @@
     }, 750);
     setTimeout(() => root.classList.remove('intro-reveal'), 2600);
   }
-  const timer = setTimeout(finish, 2700);
+  const timer = setTimeout(finish, 3300);
   document.getElementById('introSkip').addEventListener('click', () => { clearTimeout(timer); finish(); });
   intro.addEventListener('click', (e) => { if (e.target === intro) { clearTimeout(timer); finish(); } });
   document.addEventListener('keydown', function onKey(e) {

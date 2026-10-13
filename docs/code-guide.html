@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>코드 안내서 · 취향수집소</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/guide.css">
+</head>
+<body>
+  <header class="g-top">
+    <a href="../index.html">← 상세페이지로</a>
+    <button type="button" onclick="window.print()">PDF로 저장 · 인쇄</button>
+  </header>
+
+  <main class="g-main">
+    <section class="g-hero">
+      <p class="g-eyebrow">CODE GUIDE</p>
+      <h1>어떤 코드가 화면의 어디를 만드나요?</h1>
+      <p>취향수집소 상세페이지와 QR 기록 페이지를 이루는 파일, 그리고 각 화면 영역을 만드는 HTML · CSS · JavaScript를 짝지어 정리했어요. 표의 <code>#아이디</code>를 상세페이지 주소 뒤에 붙이면 그 영역으로 바로 이동해요.</p>
+    </section>
+
+    <!-- 1. 파일 구조 -->
+    <section class="g-sec">
+      <h2><span>1</span>파일 구조와 역할</h2>
+      <p class="g-lead">HTML은 <b>무엇이 있는지</b>, CSS는 <b>어떻게 보이는지</b>, JavaScript는 <b>눌렀을 때 무엇이 바뀌는지</b>를 맡아요.</p>
+      <div class="g-tree">
+<pre>TASTE/
+├─ <b>index.html</b>           상세페이지 (모든 섹션의 뼈대)
+├─ <b>archive.html</b>         QR로 열리는 '나의 취향 아카이브' 기록 페이지
+├─ css/
+│  ├─ style.css          상세페이지 디자인 (색·글꼴·반응형·모션)
+│  ├─ archive.css        기록 페이지 디자인 (모바일 우선)
+│  ├─ plan.css           기획서 A4 디자인
+│  └─ guide.css          이 안내서 디자인
+├─ js/
+│  ├─ config.js          QR이 가리킬 주소 · 상자 번호 설정
+│  ├─ intro.js           입장 모션
+│  ├─ main.js            메뉴·질문 카드·키트·캘린더·QR·갤러리·영상·구매
+│  ├─ reviews.js         리뷰 목록 · 필터 · 정렬
+│  ├─ archive.js         기록 페이지 저장 · 스탬프 · 이미지 저장
+│  └─ vendor/qrcode.min.js  QR 코드 생성 라이브러리 (qrcode-generator 1.4.4)
+├─ docs/
+│  ├─ plan.html          기획서
+│  └─ code-guide.html    이 문서
+└─ assets/
+   ├─ images/            SVG 일러스트 · 실사형 키트 이미지
+   └─ video/             promo.mp4를 넣으면 실제 영상으로 자동 교체</pre>
+      </div>
+      <h3>공통 디자인 규칙 <small>css/style.css 맨 위 <code>:root</code></small></h3>
+      <ul class="g-swatches">
+        <li style="--c:#F5D66C"><code>--butter</code>강조·버튼 그림자</li>
+        <li style="--c:#D9C5EE"><code>--lilac</code>디지털 기록</li>
+        <li style="--c:#B9DDC7"><code>--mint</code>체험·과정</li>
+        <li style="--c:#F6D5C5"><code>--peach</code>감성 포인트</li>
+        <li style="--c:#FFF9EF"><code>--ivory</code>배경</li>
+        <li style="--c:#403B38" class="dk"><code>--ink</code>글자·선</li>
+      </ul>
+      <p class="g-note">색을 바꾸고 싶으면 이 변수 값만 고치면 페이지 전체가 함께 바뀌어요. 글꼴은 제목 <code>--serif</code>(고운바탕), 본문 <code>--sans</code>(Noto Sans KR), 손글씨 <code>--hand</code>(나눔펜)예요.</p>
+    </section>
+
+    <!-- 2. 화면 영역별 -->
+    <section class="g-sec">
+      <h2><span>2</span>상세페이지 화면 영역별 코드</h2>
+      <p class="g-lead">위에서 아래로, 화면에 나오는 순서대로예요.</p>
+
+      <div class="g-table-wrap">
+      <table class="g-table">
+        <thead><tr><th>화면 영역</th><th>화면에 보이는 것</th><th>HTML</th><th>CSS</th><th>JavaScript</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>입장 모션</b></td>
+            <td>바닥에서 손그림 튤립이 쑥쑥 자라고 꽃잎이 흩날리는 가운데, 상자가 떨어져 통통 튀고, 뚜껑이 열리며 종이 조각·별·하트가 터진 뒤 로고 글자가 하나씩 튀어나와요. 동그랗게 막이 열리면 히어로가 차례로 등장해요.</td>
+            <td><code>#intro</code><br><code>&lt;head&gt;</code> 인라인 스크립트</td>
+            <td><code>.intro</code> <code>@keyframes boxDrop · flapL/R · pop · letterPop · irisOut</code><br><code>.intro-reveal</code></td>
+            <td><b>intro.js</b> — 종이 조각 44개·반짝이 14개·꽃잎 22개를 무작위로 만들고, 3.3초 뒤(또는 건너뛰기·Esc) 막을 닫아요. 매번 재생돼요.</td>
+          </tr>
+          <tr>
+            <td><b>헤더 · 메뉴</b></td>
+            <td>스크롤하면 아래 선이 생기고, 보고 있는 섹션 메뉴에 노란 밑줄. 모바일은 햄버거 메뉴.</td>
+            <td><code>#siteHeader</code> <code>#siteNav</code></td>
+            <td><code>.site-header.is-scrolled</code> <code>.is-current</code> <code>@media (max-width:900px)</code></td>
+            <td><b>main.js</b> — <code>IntersectionObserver</code>로 화면 가운데 섹션을 찾아 메뉴에 표시.</td>
+          </tr>
+          <tr>
+            <td><b>① 메인 이미지</b><br><code>#top</code></td>
+            <td>제목, 별점 4.8 · 리뷰 5,000+, 칩 4개, 가격 7,900원, 구매 버튼, 둥실 떠 있는 상자 그림과 살랑이는 손그림 튤립, 흩날리는 꽃잎.</td>
+            <td><code>.hero-grid</code> <code>.hero-rating</code></td>
+            <td><code>.hero</code> <code>@keyframes float · sway · petalFall</code> <code>.tulip</code> <code>.stars</code>(별 5개를 글자 그라데이션으로 96%만 칠함)</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><b>② 제품 특징 3가지</b><br><code>#features</code></td>
+            <td>번호·아이콘·제목·설명·손글씨 태그가 있는 카드 3장. 마우스를 올리면 살짝 떠요.</td>
+            <td><code>.feature-grid</code> &gt; <code>.feature-card</code></td>
+            <td><code>.tone-butter/peach/lilac</code>로 카드마다 다른 물감 번짐</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><b>③ 사용 방법</b><br><code>#how</code></td>
+            <td>STEP 1~4 카드 (그림 + 소요 시간).</td>
+            <td><code>.steps</code> &gt; <code>.step</code></td>
+            <td>모바일 1열 → 태블릿 2열 → PC 4열</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><b>상자 속 구성 9가지</b><br><code>#kit</code></td>
+            <td>실사형 키트 사진 위 번호 1~9. 번호나 목록에 손을 올리면 서로 노랗게 표시돼요.</td>
+            <td><code>.kit-photo</code> <code>.kit-pin[data-k]</code> <code>.kit-list li[data-k]</code></td>
+            <td>핀 위치는 <code>style="--x;--y"</code>(%)로 지정 → 화면 크기가 바뀌어도 같은 자리</td>
+            <td><b>main.js</b> <code>kitFocus(k)</code> — 같은 <code>data-k</code>를 가진 핀과 목록을 함께 켜요.</td>
+          </tr>
+          <tr>
+            <td><b>질문 카드 미리 풀어 보기</b><br><code>#quiz</code></td>
+            <td>Q1~Q3를 고르면 오른쪽 기록 카드의 색 그림·제목·태그·한 문장·다음 상자가 바뀌어요.</td>
+            <td><code>.q-card</code>(라디오 버튼) <code>.record-card</code></td>
+            <td><code>.ra-1~3</code>의 색을 CSS 변수 <code>--main --sub --accent</code>로 받음</td>
+            <td><b>main.js</b> <code>updateRecord()</code>, <code>nextBox()</code>(답에 따라 다음 상자 추천)</td>
+          </tr>
+          <tr>
+            <td><b>QR 기록 체험</b><br><code>#qrTry</code></td>
+            <td>휴대폰으로 찍으면 실제로 기록 페이지가 열리는 QR, 기록 4단계 안내, 연결 주소.</td>
+            <td><code>#qrCode</code> <code>#qrLink</code> <code>#qrNotice</code></td>
+            <td><code>.qr-card</code>(실제 QR 카드처럼 라일락 띠)</td>
+            <td><b>main.js</b> <code>renderQR()</code> — <code>config.js</code> 주소 + <code>archive.html?box=0712</code>를 QR로 만들어 SVG로 그려요. PC 파일로 열면 휴대폰이 접속할 수 없다고 안내해요.</td>
+          </tr>
+          <tr>
+            <td><b>④ 상황별 사진</b><br><code>#gallery</code></td>
+            <td>실사형 사진 7장(큰 대표 사진 1 + 3열). 설명은 사진 아래. 탭으로 거르고, 누르면 크게 보기.</td>
+            <td><code>.tab[data-filter]</code> <code>.g-item[data-cat]</code> <code>#lightbox</code>(dialog)</td>
+            <td><code>.g-feature</code>는 한 줄 전체(21:9), 나머지는 4:3. <code>.g-cap</code>은 사진 아래</td>
+            <td><b>main.js</b> — 탭: <code>is-hidden</code> 토글 / 사진: <code>lightbox.showModal()</code></td>
+          </tr>
+          <tr>
+            <td><b>12달 캘린더</b><br><code>#calendar</code></td>
+            <td>마스킹테이프로 붙인 월 시트 12장. 누르면 3D로 뒤집혀 그 달의 상자·힌트·이벤트·기간이 보여요. 이번 달엔 '이번 달' 스티커.</td>
+            <td><code>#calGrid</code>(비어 있음 → JS가 채움) <code>#calFlipAll</code></td>
+            <td><code>.cal-inner { transform-style: preserve-3d }</code><br><code>[aria-pressed="true"] → rotateY(180deg)</code><br><code>.cal-back { backface-visibility: hidden }</code></td>
+            <td><b>main.js</b> <code>MONTHS</code> 배열 12개로 카드 생성, <code>setFlip()</code>. 내용을 바꾸려면 <code>MONTHS</code>만 고치면 돼요.</td>
+          </tr>
+          <tr>
+            <td><b>홍보 영상</b><br><code>#video</code></td>
+            <td>24초 세로 영상: 고민 → 메리트 1(키트 구성) → 30분 완성 → QR 기록 → 가격·선물 → 행동. 왼쪽 장면을 누르면 거기부터 재생.</td>
+            <td><code>.clip[data-start][data-end]</code> 6개, <code>#sceneList li[data-at]</code></td>
+            <td><code>.clip.is-active</code> 페이드, <code>kenburns</code>(천천히 확대), <code>.clip-points li</code> 순차 등장</td>
+            <td><b>main.js</b> <code>tick()</code>이 <code>requestAnimationFrame</code>으로 시간을 세고 <code>render(t)</code>가 지금 장면을 켜요. <code>assets/video/promo.mp4</code>가 있으면 <code>&lt;video&gt;</code>로 자동 전환.</td>
+          </tr>
+          <tr>
+            <td><b>포스터 · 광고 시안</b><br><code>#ads</code></td>
+            <td>인스타 피드, 스토리(휴대폰 틀), 옆으로 넘기는 카드뉴스 4장.</td>
+            <td><code>.mock-feed</code> <code>.mock-story</code> <code>#cardnews</code></td>
+            <td><code>scroll-snap-type: x mandatory</code>로 한 장씩 착착</td>
+            <td><b>main.js</b> — 스크롤 위치로 점 표시, ←/→ 키로 넘기기</td>
+          </tr>
+          <tr>
+            <td><b>사용자 리뷰</b><br><code>#reviews</code></td>
+            <td>평점 4.8 / 5, 리뷰 5,000+(5,127개), 점수별 막대, 키워드 %, 리뷰 카드(필터·정렬·더 보기·도움돼요).</td>
+            <td><code>.rv-summary</code>(요약은 HTML에 고정) <code>#rvList</code>(JS가 채움)</td>
+            <td>막대는 <code>--w</code> 값만큼 <code>scaleX</code>로 자라나요. 별은 <code>--rate</code>(4점=80%)</td>
+            <td><b>reviews.js</b> — <code>REVIEWS</code> 배열(예시 12개) → <code>render()</code>. <code>filter</code>·<code>sort</code>·<code>shown</code> 세 값으로 목록을 다시 그려요.</td>
+          </tr>
+          <tr>
+            <td><b>⑤ 구매</b><br><code>#buy</code></td>
+            <td>상품 3종 선택, 수량, 선물 포장, 총 금액, 장바구니·바로 구매(확인 창), 상품 정보 고시.</td>
+            <td><code>#buyForm</code> <code>.plan input[data-price]</code> <code>#orderDialog</code></td>
+            <td><code>.plan input:checked + .plan-body</code>로 선택 카드 강조</td>
+            <td><b>main.js</b> <code>calc()</code> — (가격 + 포장) × 수량. 구독은 수량 1 고정. 모바일 하단 고정 바 금액도 함께 갱신.</td>
+          </tr>
+          <tr>
+            <td><b>스크롤 등장 효과</b></td>
+            <td>섹션이 화면에 들어오면 아래에서 스르륵.</td>
+            <td><code>class="reveal"</code></td>
+            <td><code>.reveal</code> → <code>.reveal.is-in</code></td>
+            <td><b>main.js</b> <code>revealObserver</code>. '동작 줄이기' 설정을 켠 사람에겐 모든 모션을 꺼요(<code>prefers-reduced-motion</code>).</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+    <!-- 3. QR → 기록 페이지 -->
+    <section class="g-sec">
+      <h2><span>3</span>QR을 찍으면 일어나는 일</h2>
+      <ol class="g-flow">
+        <li><b>QR 만들기</b><code>main.js renderQR()</code><small>주소를 QR 모듈(검은 칸)로 바꿔 SVG로 그림</small></li>
+        <li><b>휴대폰 카메라</b><small>https://아이디.github.io/TASTE/<br>archive.html?box=0712</small></li>
+        <li><b>기록 페이지</b><code>archive.html</code><small>상자 번호를 주소에서 읽어 표시</small></li>
+        <li><b>저장</b><code>archive.js</code><small>휴대폰 브라우저 localStorage에 저장 → 스탬프 +1</small></li>
+      </ol>
+
+      <h3>기록 페이지(archive.html)의 구성 — 키트 활동과 1:1로 대응</h3>
+      <div class="g-table-wrap">
+      <table class="g-table">
+        <thead><tr><th>단계</th><th>키트에서 한 일</th><th>기록하는 내용</th><th>코드</th></tr></thead>
+        <tbody>
+          <tr><td>0 · 환영</td><td>상자 뚜껑의 스탬프 칸</td><td>지금까지 모은 스탬프 n / 12</td><td><code>renderStamps()</code></td></tr>
+          <tr><td>1 · 답하기</td><td>질문 카드 3장</td><td>Q1 오늘의 색 · Q2 오늘의 단어(직접 입력 가능) · Q3 하고 싶은 일</td><td><code>fieldset[data-step="1"]</code></td></tr>
+          <tr><td>2 · 사진</td><td>완성한 콜라주</td><td>사진 촬영/앨범 → 긴 변 900px로 줄여 저장</td><td><code>photoInput change</code> → canvas → <code>toDataURL</code></td></tr>
+          <tr><td>3 · 기록</td><td>기록 카드</td><td>작품 제목 · 날짜 · 오늘의 한 문장(60자) · 손이 많이 간 재료 · 걸린 시간 · 만족도</td><td><code>fieldset[data-step="3"]</code></td></tr>
+          <tr><td>4 · 다음 취향</td><td>—</td><td>해 보고 싶은 경험 최대 3개 · 익명 공유 동의</td><td><code>recommend()</code>가 다음 상자 추천</td></tr>
+          <tr><td>결과</td><td>스탬프 스티커</td><td>스탬프 도장 애니메이션 · 기록 카드 · 이미지로 저장(1080×1350 PNG) · 다음 상자</td><td><code>showResult()</code> <code>saveImage</code>(canvas)</td></tr>
+          <tr><td>도감</td><td>벽에 모은 엽서</td><td>지난 기록 목록, 전체 지우기</td><td><code>renderHistory()</code></td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="g-note"><b>휴대폰에서 QR이 열리려면</b> 사이트가 인터넷 주소로 열려 있어야 해요. GitHub Pages에 올린 주소(<code>https://아이디.github.io/TASTE/</code>)로 열면 <code>renderQR()</code>이 그 주소를 그대로 QR로 만들어요. PC에서 파일로 열 때는 <code>js/config.js</code>의 <code>archiveBaseUrl</code>에 그 주소를 적으면 돼요. 올리는 방법은 <code>readme.md</code>에 있어요. 기록은 서버로 보내지 않고 각 휴대폰에만 저장돼요.</p>
+    </section>
+
+    <!-- 4. 자주 고칠 곳 -->
+    <section class="g-sec">
+      <h2><span>4</span>내용을 바꾸고 싶을 때</h2>
+      <div class="g-cards">
+        <div><b>월별 이벤트</b><p><code>js/main.js</code> → <code>const MONTHS = [...]</code></p></div>
+        <div><b>리뷰 문구 · 개수</b><p><code>js/reviews.js</code> → <code>const REVIEWS = [...]</code><br>평점·총 개수는 <code>index.html #reviews</code></p></div>
+        <div><b>가격</b><p><code>index.html</code>의 <code>data-price</code> 값 + 화면 글자</p></div>
+        <div><b>QR 주소 · 상자 번호</b><p><code>js/config.js</code></p></div>
+        <div><b>영상 장면 · 길이</b><p><code>index.html .clip</code>의 <code>data-start/end</code> + <code>main.js DURATION</code></p></div>
+        <div><b>입장 모션 길이</b><p><code>js/intro.js</code> → <code>setTimeout(finish, 2700)</code></p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

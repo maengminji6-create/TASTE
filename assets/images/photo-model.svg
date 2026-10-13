@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="세이지 민트 니트를 입은 모델 지우가 완성한 콜라주 엽서를 두 손으로 들고 있는 모습"><defs>
+  <filter id="sh" x="-25%" y="-25%" width="150%" height="160%"><feDropShadow dx="4" dy="10" stdDeviation="9" flood-color="#4A3828" flood-opacity=".26"/></filter>
+  <filter id="shs" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="1.5" dy="3" stdDeviation="2" flood-color="#4A3828" flood-opacity=".3"/></filter>
+  <filter id="shw" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="8" dy="14" stdDeviation="8" flood-color="#5A4636" flood-opacity=".22"/></filter>
+  <filter id="blur6"><feGaussianBlur stdDeviation="6"/></filter>
+  <filter id="blur18" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="paper" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" seed="5" result="n"/>
+    <feColorMatrix in="n" type="matrix" values=".16 0 0 0 .86  .16 0 0 0 .86  .16 0 0 0 .86  0 0 0 0 1" result="g"/>
+    <feBlend in="SourceGraphic" in2="g" mode="multiply" result="b"/>
+    <feComposite in="b" in2="SourceGraphic" operator="in"/>
+  </filter>
+  <filter id="linen" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".9 .035" numOctaves="2" seed="5" result="a"/>
+    <feTurbulence type="fractalNoise" baseFrequency=".035 .9" numOctaves="2" seed="10" result="b"/>
+    <feBlend in="a" in2="b" mode="multiply" result="ab"/>
+    <feColorMatrix in="ab" type="matrix" values=".22 0 0 0 .8  .22 0 0 0 .78  .22 0 0 0 .74  0 0 0 0 1" result="g"/>
+    <feBlend in="SourceGraphic" in2="g" mode="multiply"/>
+  </filter>
+  <filter id="wood" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".004 .09" numOctaves="4" seed="7" result="t"/>
+    <feColorMatrix in="t" type="matrix" values=".5 0 0 0 .62  .5 0 0 0 .58  .5 0 0 0 .52  0 0 0 0 1" result="g"/>
+    <feBlend in="SourceGraphic" in2="g" mode="multiply"/>
+  </filter>
+  <filter id="plaster" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="4" seed="12" result="t"/>
+    <feColorMatrix in="t" type="matrix" values=".12 0 0 0 .9  .12 0 0 0 .89  .12 0 0 0 .87  0 0 0 0 1" result="g"/>
+    <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="1" seed="2" result="f"/>
+    <feColorMatrix in="f" type="matrix" values=".1 0 0 0 .92  .1 0 0 0 .92  .1 0 0 0 .92  0 0 0 0 1" result="h"/>
+    <feBlend in="g" in2="h" mode="multiply" result="gh"/>
+    <feBlend in="SourceGraphic" in2="gh" mode="multiply"/>
+  </filter>
+  <filter id="knit" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".6" numOctaves="2" seed="9" result="n"/>
+    <feColorMatrix in="n" type="matrix" values=".25 0 0 0 .8  .25 0 0 0 .8  .25 0 0 0 .8  0 0 0 0 1" result="g"/>
+    <feBlend in="SourceGraphic" in2="g" mode="multiply" result="b"/>
+    <feComposite in="b" in2="SourceGraphic" operator="in"/>
+  </filter>
+  <linearGradient id="gloss" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity=".18"/></linearGradient>
+  <radialGradient id="light" cx=".22" cy=".12" r="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#5A4230" stop-opacity=".18"/></radialGradient>
+  <linearGradient id="glue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C7B1E2"/><stop offset=".28" stop-color="#EEE4F8"/><stop offset=".55" stop-color="#D9C5EE"/><stop offset="1" stop-color="#A993C6"/></linearGradient>
+  <linearGradient id="glueCap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9C86BA"/><stop offset=".3" stop-color="#D5C3EA"/><stop offset="1" stop-color="#7E6A9A"/></linearGradient>
+  <linearGradient id="satin" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#BBA3D9"/><stop offset=".35" stop-color="#E9DDF6"/><stop offset=".6" stop-color="#D2BDEB"/><stop offset="1" stop-color="#A88FC9"/></linearGradient>
+  <linearGradient id="satinV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BBA3D9"/><stop offset=".35" stop-color="#E9DDF6"/><stop offset=".6" stop-color="#D2BDEB"/><stop offset="1" stop-color="#A88FC9"/></linearGradient>
+  <linearGradient id="phone" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5A5350"/><stop offset=".5" stop-color="#2E2A28"/><stop offset="1" stop-color="#1E1B1A"/></linearGradient>
+  <linearGradient id="pencil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F8E39A"/><stop offset=".45" stop-color="#F5D66C"/><stop offset="1" stop-color="#D9B54A"/></linearGradient>
+  <radialGradient id="latte" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#E7CDAE"/><stop offset=".75" stop-color="#C79A6E"/><stop offset="1" stop-color="#A9784E"/></radialGradient>
+  <radialGradient id="cup" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".8" stop-color="#F1ECE4"/><stop offset="1" stop-color="#DDD4C8"/></radialGradient>
+  <radialGradient id="skin" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#F7DCC8"/><stop offset=".7" stop-color="#EBC2A7"/><stop offset="1" stop-color="#D9A88B"/></radialGradient>
+  <linearGradient id="wallLight" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#6B5440" stop-opacity=".12"/></linearGradient>
+  <linearGradient id="sweep" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6EEE2"/><stop offset=".62" stop-color="#FBF5EC"/><stop offset="1" stop-color="#EFE4D3"/></linearGradient>
+  <linearGradient id="faceL" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#DED2C0"/><stop offset="1" stop-color="#ECE3D5"/></linearGradient>
+  <linearGradient id="faceR" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#CDBFAB"/><stop offset="1" stop-color="#BFB09B"/></linearGradient>
+  <linearGradient id="bandL" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E9C658"/><stop offset="1" stop-color="#F5D66C"/></linearGradient>
+  <linearGradient id="bandR" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#D9B54A"/><stop offset="1" stop-color="#CDA942"/></linearGradient>
+  <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#F5D66C"/><circle cx="7" cy="7" r="2.4" fill="#FFF9EF"/></pattern>
+  <pattern id="stripe" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="12" height="12" fill="#B9DDC7"/><rect width="5" height="12" fill="#E3F1E8"/></pattern>
+  <pattern id="check" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#F6D5C5"/><rect width="8" height="8" fill="#EDBFAB"/><rect x="8" y="8" width="8" height="8" fill="#EDBFAB"/></pattern>
+  <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#FFFDF8"/><path d="M10 0V10H0" fill="none" stroke="#E6DDF2" stroke-width="1"/></pattern>
+  <pattern id="knitp" width="16" height="14" patternUnits="userSpaceOnUse"><rect width="16" height="14" fill="#A9D2B9"/><path d="M1 1 L8 12 M15 1 L8 12" stroke="#C9E6D4" stroke-width="5" stroke-linecap="round"/><path d="M1 1 L8 12 M15 1 L8 12" stroke="#93C2A6" stroke-width="1" opacity=".6"/></pattern>
+  <pattern id="rib" width="8" height="10" patternUnits="userSpaceOnUse"><rect width="8" height="10" fill="#9CC8AE"/><rect width="4" height="10" fill="#B9DDC7"/></pattern>
+</defs><rect width="800" height="1000" fill="#F1E7D8" filter="url(#linen)"/>
+<g opacity=".18" filter="url(#blur18)" fill="#6B5440"><path d="M0 300 C200 360 420 250 800 330 L800 360 C420 290 200 400 0 340 Z"/><path d="M0 820 C260 760 520 880 800 800 L800 840 C520 920 260 800 0 860 Z"/></g>
+<rect width="800" height="1000" fill="url(#light)"/>
+<!-- 소매 + 니트 시보리 -->
+<g filter="url(#sh)">
+  <path d="M-60 1010 L-60 830 C30 800 150 820 250 890 L262 1010 Z" fill="url(#knitp)"/>
+  <path d="M860 1010 L860 830 C770 800 650 820 550 890 L538 1010 Z" fill="url(#knitp)"/>
+</g>
+<!-- 손바닥·손가락 옆선 (엽서 뒤에서 감싸 쥠) -->
+<g filter="url(#sh)">
+  <path d="M138 880 C140 800 150 730 166 680 C176 646 168 612 176 576 C184 546 206 532 222 540 C232 546 236 560 234 580 L240 860 Z" fill="url(#skin)"/>
+  <path d="M662 880 C660 800 650 730 634 680 C624 646 632 612 624 576 C616 546 594 532 578 540 C568 546 564 560 566 580 L560 860 Z" fill="url(#skin)"/>
+  <g fill="none" stroke="#D49C80" stroke-width="1.6" opacity=".7" stroke-linecap="round">
+    <path d="M170 640 C180 636 192 638 200 644"/><path d="M168 690 C178 686 190 688 198 694"/><path d="M166 740 C176 736 188 738 196 744"/>
+    <path d="M630 640 C620 636 608 638 600 644"/><path d="M632 690 C622 686 610 688 602 694"/><path d="M634 740 C624 736 612 738 604 744"/>
+  </g>
+</g>
+<g filter="url(#shs)">
+  <path d="M112 850 C165 852 220 868 258 898 L244 952 C202 924 150 906 96 904 Z" fill="url(#rib)"/>
+  <path d="M688 850 C635 852 580 868 542 898 L556 952 C598 924 650 906 704 904 Z" fill="url(#rib)"/>
+</g>
+<g transform="rotate(-3 400.0 530.0)" filter="url(#shw)">
+  <g filter="url(#paper)"><rect x="200" y="270" width="400" height="520" fill="#FFFDF8"/>
+  <rect x="210" y="280" width="380" height="500" fill="#B9DDC7"/></g>
+  <g filter="url(#shs)"><rect x="240.0" y="306.6666666666667" width="133.33333333333334" height="116.66666666666667" fill="url(#dots)" transform="rotate(-6 300.0 353.33333333333337)"/><circle cx="496.66666666666663" cy="370.0" r="56.66666666666667" fill="#D9C5EE"/><rect x="316.6666666666667" y="630.0" width="160.0" height="96.66666666666667" fill="url(#stripe)" transform="rotate(4 396.6666666666667 680.0)"/><polygon points="450.0,740.0 533.3333333333334,640.0 556.6666666666666,743.3333333333334" fill="url(#check)"/><rect x="250.0" y="673.3333333333334" width="56.66666666666667" height="56.66666666666667" rx="10.0" fill="#F5D66C" stroke="#fff" stroke-width="5.0"/><polygon points="416.7,315.0 422.5,328.6 437.3,330.0 426.2,339.8 429.4,354.2 416.7,346.7 403.9,354.2 407.2,339.8 396.1,330.0 410.8,328.6" fill="#F6D5C5" stroke="#fff" stroke-width="4.166666666666667"/></g>
+  <rect x="200" y="270" width="400" height="520" fill="url(#gloss)" opacity=".35"/>
+</g>
+<g transform="rotate(-3 400 530)" font-family="'Nanum Pen Script','Segoe Print',cursive" fill="#403B38"><text x="236" y="760" font-size="28">조용한 보라 · 10.13</text></g>
+<!-- 엄지 (엽서 앞) -->
+<g filter="url(#shs)">
+  <path d="M190 712 C204 672 230 640 262 626 C282 618 296 634 286 650 C270 674 240 700 212 726 C200 736 184 730 190 712 Z" fill="url(#skin)"/>
+  <ellipse cx="270" cy="636" rx="13" ry="9" transform="rotate(-32 270 636)" fill="#F9E8DE" stroke="#E2B49A" stroke-width="1"/>
+  <path d="M610 712 C596 672 570 640 538 626 C518 618 504 634 514 650 C530 674 560 700 588 726 C600 736 616 730 610 712 Z" fill="url(#skin)"/>
+  <ellipse cx="530" cy="636" rx="13" ry="9" transform="rotate(32 530 636)" fill="#F9E8DE" stroke="#E2B49A" stroke-width="1"/>
+</g>
+<g transform="translate(540 140) rotate(150) scale(0.9)" filter="url(#sh)">
+  <path d="M0 0 C40 6 120 4 210 -4" fill="none" stroke="#5E8A55" stroke-width="7" stroke-linecap="round"/>
+  <path d="M30 2 C70 -40 130 -46 170 -30 C120 -22 80 -10 40 6 Z" fill="#7FA66E"/>
+  <path d="M60 4 C100 30 150 36 190 24 C140 16 100 8 66 0 Z" fill="#6F9A63"/>
+  <path d="M210 -4 C224 -30 262 -34 280 -18 C292 -6 292 10 280 20 C262 34 226 28 210 -4 Z" fill="#F1A2B1"/>
+  <path d="M214 -4 C238 -22 266 -20 278 -6 C266 2 240 4 214 -4 Z" fill="#F6BBC6"/>
+  <path d="M220 -8 C240 -14 258 -14 272 -10" stroke="#fff" stroke-width="2" opacity=".6" fill="none"/>
+</g><rect width="800" height="1000" fill="url(#light)"/></svg>

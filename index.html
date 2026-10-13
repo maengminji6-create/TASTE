@@ -15,10 +15,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script>
-    /* 입장 모션: 첫 화면이 보이기 전에 덮어 두기. 모션 줄이기 설정이거나 #링크로 들어오면 생략 */
+    /* 입장 모션: 첫 화면이 보이기 전에 덮어 두기 (매번 재생, 건너뛰기 가능) */
     (function () {
       var r = document.documentElement;
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || location.hash) return;
       r.classList.add('intro-pending');
       setTimeout(function () { r.classList.remove('intro-pending'); }, 6000); // 안전장치
     })();
@@ -29,6 +28,7 @@
   <div class="intro" id="intro" aria-hidden="true">
     <div class="intro-stage">
       <div class="intro-confetti" id="introConfetti"></div>
+      <div class="intro-sparkles" id="introSparkles"></div>
       <svg class="intro-box" viewBox="0 0 200 180">
         <g class="ib-body">
           <polygon points="30,70 100,95 100,170 32,145" fill="#D9C5EE"/>
@@ -43,6 +43,15 @@
       </svg>
       <p class="intro-logo" id="introLogo">취향수집소</p>
       <p class="intro-slogan">아직 몰랐던 나를 수집하는 시간</p>
+    </div>
+    <div class="intro-petals" id="introPetals"></div>
+    <div class="intro-garden">
+      <img src="assets/images/tulip-lilac.svg" alt="" style="--i:0;--x:4%;--h:30vh;--r:-10deg">
+      <img src="assets/images/tulip.svg" alt="" style="--i:1;--x:12%;--h:40vh;--r:-3deg">
+      <img src="assets/images/tulip-butter.svg" alt="" style="--i:2;--x:20%;--h:26vh;--r:8deg">
+      <img src="assets/images/tulip-peach.svg" alt="" style="--i:3;--x:72%;--h:28vh;--r:-8deg">
+      <img src="assets/images/tulip.svg" alt="" style="--i:4;--x:80%;--h:42vh;--r:4deg">
+      <img src="assets/images/tulip-lilac.svg" alt="" style="--i:5;--x:89%;--h:32vh;--r:11deg">
     </div>
     <button type="button" class="intro-skip" id="introSkip">건너뛰기</button>
   </div>
@@ -77,6 +86,12 @@
 
     <!-- ===== 1. Hero : 상단 메인 이미지 ===== -->
     <section class="hero" id="top">
+      <div class="hero-petals" id="heroPetals" aria-hidden="true"></div>
+      <span class="hero-bouquet" aria-hidden="true">
+        <img class="tulip" src="assets/images/tulip-lilac.svg" alt="" style="--w:58px;--r:-12deg;--d:-1s">
+        <img class="tulip" src="assets/images/tulip.svg" alt="" style="--w:74px;--r:-2deg;--d:-2.6s">
+        <img class="tulip" src="assets/images/tulip-butter.svg" alt="" style="--w:50px;--r:10deg;--d:-.3s">
+      </span>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow">취향 샘플러 · 첫 번째 상자</p>
@@ -103,6 +118,13 @@
         </div>
         <figure class="hero-visual reveal">
           <img src="assets/images/hero.svg" alt="뚜껑이 열린 취향수집소 상자 위로 물음표 카드와 티켓이 떠오르는 일러스트" width="800" height="680" fetchpriority="high">
+          <!-- 손그림 튤립: 바람에 살랑 흔들려요 -->
+          <span class="tulips" aria-hidden="true">
+            <img class="tulip" src="assets/images/tulip.svg" alt="" style="--l:0%;--w:15%;--r:-9deg;--d:0s">
+            <img class="tulip" src="assets/images/tulip-butter.svg" alt="" style="--l:11%;--w:11%;--r:5deg;--d:-1.4s">
+            <img class="tulip" src="assets/images/tulip-peach.svg" alt="" style="--l:74%;--w:10%;--r:-5deg;--d:-2.2s">
+            <img class="tulip" src="assets/images/tulip-lilac.svg" alt="" style="--l:84%;--w:14%;--r:9deg;--d:-.7s">
+          </span>
         </figure>
       </div>
     </section>
@@ -158,7 +180,7 @@
 
         <ol class="steps">
           <li class="step reveal">
-            <div class="step-img"><img src="assets/images/product-box.svg" alt="닫힌 취향수집소 상자" loading="lazy" width="800" height="800"></div>
+            <div class="step-img"><img src="assets/images/photo-box.svg" alt="닫힌 취향수집소 상자" loading="lazy" width="900" height="900"></div>
             <div class="step-body">
               <span class="step-num">STEP 1</span>
               <h3>상자 열기</h3>
@@ -176,7 +198,7 @@
             </div>
           </li>
           <li class="step reveal">
-            <div class="step-img"><img src="assets/images/scene-desk.svg" alt="콜라주를 붙이는 손" loading="lazy" width="800" height="600"></div>
+            <div class="step-img"><img src="assets/images/photo-desk.svg" alt="콜라주를 붙이는 손" loading="lazy" width="1000" height="750"></div>
             <div class="step-body">
               <span class="step-num">STEP 3</span>
               <h3>올려 보고, 붙이기</h3>
@@ -185,7 +207,7 @@
             </div>
           </li>
           <li class="step reveal">
-            <div class="step-img"><img src="assets/images/scene-record.svg" alt="휴대폰으로 QR을 찍어 기록하는 장면" loading="lazy" width="800" height="600"></div>
+            <div class="step-img"><img src="assets/images/photo-record.svg" alt="휴대폰으로 QR을 찍어 기록하는 장면" loading="lazy" width="1000" height="750"></div>
             <div class="step-body">
               <span class="step-num">STEP 4</span>
               <h3>QR로 기록하기</h3>
@@ -322,45 +344,45 @@
         </div>
 
         <ul class="gallery-grid" id="galleryGrid">
-          <li class="g-item g-wide" data-cat="scene">
-            <button class="g-btn" data-full="assets/images/scene-desk.svg">
-              <img src="assets/images/scene-desk.svg" alt="햇살 드는 오후의 책상 위에서 콜라주를 붙이는 손" loading="lazy" width="800" height="600">
-              <span class="g-cap"><em>상황 · 혼자만의 오후</em>창가 책상에서 30분, 나에게 집중하는 시간</span>
+          <li class="g-item g-feature" data-cat="scene">
+            <button class="g-btn" data-full="assets/images/photo-desk.svg">
+              <span class="g-img"><img src="assets/images/photo-desk.svg" alt="햇살 드는 창가 책상 위, 만들고 있는 콜라주 엽서와 라떼, 튤립 한 송이" loading="lazy" width="1000" height="750"><span class="g-zoom" aria-hidden="true">크게 보기</span></span>
+              <span class="g-cap"><em>상황 · 혼자만의 오후</em>창가 책상에서 30분, 오롯이 나에게 집중하는 시간</span>
             </button>
           </li>
-          <li class="g-item" data-cat="product">
-            <button class="g-btn" data-full="assets/images/kit-real.svg">
-              <img src="assets/images/kit-real.svg" alt="키트 구성품 플랫레이" loading="lazy" width="1000" height="760">
-              <span class="g-cap"><em>제품 · 구성품</em>상자 하나에 필요한 모든 것</span>
-            </button>
-          </li>
-          <li class="g-item g-tall" data-cat="model">
-            <button class="g-btn" data-full="assets/images/model.svg">
-              <img src="assets/images/model.svg" alt="완성한 콜라주 엽서를 들고 웃는 모델" loading="lazy" width="600" height="750">
+          <li class="g-item" data-cat="model">
+            <button class="g-btn" data-full="assets/images/photo-model.svg">
+              <span class="g-img"><img src="assets/images/photo-model.svg" alt="세이지 민트 니트를 입은 모델이 완성한 콜라주 엽서를 두 손으로 든 모습" loading="lazy" width="800" height="1000"><span class="g-zoom" aria-hidden="true">크게 보기</span></span>
               <span class="g-cap"><em>모델 · 지우, 24세</em>“생각보다 잘 만들었는데요?”</span>
             </button>
           </li>
           <li class="g-item" data-cat="product">
-            <button class="g-btn" data-full="assets/images/product-box.svg">
-              <img src="assets/images/product-box.svg" alt="스탬프 칸이 있는 닫힌 상자" loading="lazy" width="800" height="800">
+            <button class="g-btn" data-full="assets/images/kit-real.svg">
+              <span class="g-img"><img src="assets/images/kit-real.svg" alt="리넨 위에 펼쳐 놓은 키트 구성품 9가지" loading="lazy" width="1000" height="760"><span class="g-zoom" aria-hidden="true">크게 보기</span></span>
+              <span class="g-cap"><em>제품 · 구성품</em>상자 하나에 필요한 모든 것</span>
+            </button>
+          </li>
+          <li class="g-item" data-cat="product">
+            <button class="g-btn" data-full="assets/images/photo-box.svg">
+              <span class="g-img"><img src="assets/images/photo-box.svg" alt="노란 띠지를 두른 취향수집소 상자 제품 사진" loading="lazy" width="900" height="900"><span class="g-zoom" aria-hidden="true">크게 보기</span></span>
               <span class="g-cap"><em>제품 · 패키지</em>15×15×5cm, 손바닥 위의 상자</span>
             </button>
           </li>
           <li class="g-item" data-cat="scene">
-            <button class="g-btn" data-full="assets/images/scene-gift.svg">
-              <img src="assets/images/scene-gift.svg" alt="리본을 묶은 상자와 for you 태그" loading="lazy" width="800" height="600">
+            <button class="g-btn" data-full="assets/images/photo-gift.svg">
+              <span class="g-img"><img src="assets/images/photo-gift.svg" alt="라일락 리본을 묶은 선물 상자와 for you 태그, 카드 봉투" loading="lazy" width="1000" height="750"><span class="g-zoom" aria-hidden="true">크게 보기</span></span>
               <span class="g-cap"><em>상황 · 선물할 때</em>“네 취향이 궁금해” 한 줄과 함께</span>
             </button>
           </li>
           <li class="g-item" data-cat="scene">
-            <button class="g-btn" data-full="assets/images/scene-record.svg">
-              <img src="assets/images/scene-record.svg" alt="QR로 기록하는 장면" loading="lazy" width="800" height="600">
-              <span class="g-cap"><em>상황 · 기록할 때</em>완성 직후, 휴대폰으로 5분</span>
+            <button class="g-btn" data-full="assets/images/photo-record.svg">
+              <span class="g-img"><img src="assets/images/photo-record.svg" alt="완성한 엽서 옆에서 휴대폰으로 취향 기록을 남긴 화면" loading="lazy" width="1000" height="750"><span class="g-zoom" aria-hidden="true">크게 보기</span></span>
+              <span class="g-cap"><em>상황 · 기록할 때</em>완성 직후, QR로 휴대폰에 5분</span>
             </button>
           </li>
           <li class="g-item" data-cat="scene">
-            <button class="g-btn" data-full="assets/images/scene-wall.svg">
-              <img src="assets/images/scene-wall.svg" alt="벽에 붙여 모은 달마다의 콜라주 엽서" loading="lazy" width="800" height="600">
+            <button class="g-btn" data-full="assets/images/photo-wall.svg">
+              <span class="g-img"><img src="assets/images/photo-wall.svg" alt="벽에 집게와 마스킹테이프로 붙여 모은 콜라주 엽서들" loading="lazy" width="1000" height="750"><span class="g-zoom" aria-hidden="true">크게 보기</span></span>
               <span class="g-cap"><em>상황 · 모아 둘 때</em>한 달에 한 장, 벽에 쌓이는 취향 도감</span>
             </button>
           </li>
@@ -429,25 +451,25 @@
                 </ul>
               </div>
               <div class="clip" data-start="9" data-end="13">
-                <img src="assets/images/scene-desk.svg" alt="">
+                <img src="assets/images/photo-desk.svg" alt="">
                 <p class="clip-label">MERIT 02</p>
                 <p class="clip-text">30분이면 완성,<br>실패 없는 콜라주</p>
                 <ul class="clip-points"><li>가위 필요 없음</li><li>정답 없음</li><li>처음도 OK</li></ul>
               </div>
               <div class="clip" data-start="13" data-end="17">
-                <img src="assets/images/scene-record.svg" alt="">
+                <img src="assets/images/photo-record.svg" alt="">
                 <p class="clip-label">MERIT 03</p>
                 <p class="clip-text">만들고 끝이 아니라<br>기록으로 남아요</p>
                 <ul class="clip-points"><li>QR 한 번 · 5분</li><li>앱 설치 없음</li><li>다음 상자가 나를 닮아요</li></ul>
               </div>
               <div class="clip" data-start="17" data-end="21">
-                <img src="assets/images/scene-gift.svg" alt="">
+                <img src="assets/images/photo-gift.svg" alt="">
                 <p class="clip-label">MERIT 04</p>
                 <p class="clip-text">커피 두 잔 값,<br>선물로도 딱</p>
                 <ul class="clip-points"><li>단품 7,900원</li><li>선물 포장 +1,000원</li><li>매달 구독도 가능</li></ul>
               </div>
               <div class="clip" data-start="21" data-end="24.01">
-                <img src="assets/images/product-box.svg" alt="">
+                <img src="assets/images/photo-box.svg" alt="">
                 <p class="clip-text hand">아직 몰랐던 나를<br>수집하는 시간</p>
                 <div class="end-card"><span>취향수집소</span><small>첫 상자 7,900원 · 지금 시작하기</small></div>
               </div>
@@ -689,6 +711,7 @@
         <div class="btn-row center reveal">
           <a class="btn btn-primary" href="docs/plan.html" target="_blank" rel="noopener">기획서 전체 보기</a>
           <a class="btn btn-ghost" href="docs/plan.html?print=1" target="_blank" rel="noopener">PDF로 저장하기</a>
+          <a class="btn btn-ghost" href="docs/code-guide.html" target="_blank" rel="noopener">코드 안내서</a>
         </div>
       </div>
     </section>

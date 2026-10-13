@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-label="취향수집소 상자 제품 사진: 노란 띠지와 상자 번호, 옆면 스탬프 칸, 튤립"><defs>
+  <filter id="sh" x="-25%" y="-25%" width="150%" height="160%"><feDropShadow dx="4" dy="10" stdDeviation="9" flood-color="#4A3828" flood-opacity=".26"/></filter>
+  <filter id="shs" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="1.5" dy="3" stdDeviation="2" flood-color="#4A3828" flood-opacity=".3"/></filter>
+  <filter id="shw" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="8" dy="14" stdDeviation="8" flood-color="#5A4636" flood-opacity=".22"/></filter>
+  <filter id="blur6"><feGaussianBlur stdDeviation="6"/></filter>
+  <filter id="blur18" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="paper" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" seed="5" result="n"/>
+    <feColorMatrix in="n" type="matrix" values=".16 0 0 0 .86  .16 0 0 0 .86  .16 0 0 0 .86  0 0 0 0 1" result="g"/>
+    <feBlend in="SourceGraphic" in2="g" mode="multiply" result="b"/>
+    <feComposite in="b" in2="SourceGraphic" operator="in"/>
+  </filter>
+  <filter id="linen" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".9 .035" numOctaves="2" seed="2" result="a"/>
+    <feTurbulence type="fractalNoise" baseFrequency=".035 .9" numOctaves="2" seed="7" result="b"/>
+    <feBlend in="a" in2="b" mode="multiply" result="ab"/>
+    <feColorMatrix in="ab" type="matrix" values=".22 0 0 0 .8  .22 0 0 0 .78  .22 0 0 0 .74  0 0 0 0 1" result="g"/>
+    <feBlend in="SourceGraphic" in2="g" mode="multiply"/>
+  </filter>
+  <filter id="wood" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".004 .09" numOctaves="4" seed="4" result="t"/>
+    <feColorMatrix in="t" type="matrix" values=".5 0 0 0 .62  .5 0 0 0 .58  .5 0 0 0 .52  0 0 0 0 1" result="g"/>
+    <feBlend in="SourceGraphic" in2="g" mode="multiply"/>
+  </filter>
+  <filter id="plaster" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="4" seed="9" result="t"/>
+    <feColorMatrix in="t" type="matrix" values=".12 0 0 0 .9  .12 0 0 0 .89  .12 0 0 0 .87  0 0 0 0 1" result="g"/>
+    <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="1" seed="2" result="f"/>
+    <feColorMatrix in="f" type="matrix" values=".1 0 0 0 .92  .1 0 0 0 .92  .1 0 0 0 .92  0 0 0 0 1" result="h"/>
+    <feBlend in="g" in2="h" mode="multiply" result="gh"/>
+    <feBlend in="SourceGraphic" in2="gh" mode="multiply"/>
+  </filter>
+  <filter id="knit" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".6" numOctaves="2" seed="9" result="n"/>
+    <feColorMatrix in="n" type="matrix" values=".25 0 0 0 .8  .25 0 0 0 .8  .25 0 0 0 .8  0 0 0 0 1" result="g"/>
+    <feBlend in="SourceGraphic" in2="g" mode="multiply" result="b"/>
+    <feComposite in="b" in2="SourceGraphic" operator="in"/>
+  </filter>
+  <linearGradient id="gloss" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity=".18"/></linearGradient>
+  <radialGradient id="light" cx=".22" cy=".12" r="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#5A4230" stop-opacity=".18"/></radialGradient>
+  <linearGradient id="glue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C7B1E2"/><stop offset=".28" stop-color="#EEE4F8"/><stop offset=".55" stop-color="#D9C5EE"/><stop offset="1" stop-color="#A993C6"/></linearGradient>
+  <linearGradient id="glueCap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9C86BA"/><stop offset=".3" stop-color="#D5C3EA"/><stop offset="1" stop-color="#7E6A9A"/></linearGradient>
+  <linearGradient id="satin" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#BBA3D9"/><stop offset=".35" stop-color="#E9DDF6"/><stop offset=".6" stop-color="#D2BDEB"/><stop offset="1" stop-color="#A88FC9"/></linearGradient>
+  <linearGradient id="satinV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BBA3D9"/><stop offset=".35" stop-color="#E9DDF6"/><stop offset=".6" stop-color="#D2BDEB"/><stop offset="1" stop-color="#A88FC9"/></linearGradient>
+  <linearGradient id="phone" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5A5350"/><stop offset=".5" stop-color="#2E2A28"/><stop offset="1" stop-color="#1E1B1A"/></linearGradient>
+  <linearGradient id="pencil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F8E39A"/><stop offset=".45" stop-color="#F5D66C"/><stop offset="1" stop-color="#D9B54A"/></linearGradient>
+  <radialGradient id="latte" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#E7CDAE"/><stop offset=".75" stop-color="#C79A6E"/><stop offset="1" stop-color="#A9784E"/></radialGradient>
+  <radialGradient id="cup" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".8" stop-color="#F1ECE4"/><stop offset="1" stop-color="#DDD4C8"/></radialGradient>
+  <radialGradient id="skin" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#F7DCC8"/><stop offset=".7" stop-color="#EBC2A7"/><stop offset="1" stop-color="#D9A88B"/></radialGradient>
+  <linearGradient id="wallLight" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#6B5440" stop-opacity=".12"/></linearGradient>
+  <linearGradient id="sweep" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6EEE2"/><stop offset=".62" stop-color="#FBF5EC"/><stop offset="1" stop-color="#EFE4D3"/></linearGradient>
+  <linearGradient id="faceL" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#DED2C0"/><stop offset="1" stop-color="#ECE3D5"/></linearGradient>
+  <linearGradient id="faceR" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#CDBFAB"/><stop offset="1" stop-color="#BFB09B"/></linearGradient>
+  <linearGradient id="bandL" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E9C658"/><stop offset="1" stop-color="#F5D66C"/></linearGradient>
+  <linearGradient id="bandR" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#D9B54A"/><stop offset="1" stop-color="#CDA942"/></linearGradient>
+  <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#F5D66C"/><circle cx="7" cy="7" r="2.4" fill="#FFF9EF"/></pattern>
+  <pattern id="stripe" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="12" height="12" fill="#B9DDC7"/><rect width="5" height="12" fill="#E3F1E8"/></pattern>
+  <pattern id="check" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#F6D5C5"/><rect width="8" height="8" fill="#EDBFAB"/><rect x="8" y="8" width="8" height="8" fill="#EDBFAB"/></pattern>
+  <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#FFFDF8"/><path d="M10 0V10H0" fill="none" stroke="#E6DDF2" stroke-width="1"/></pattern>
+  <pattern id="knitp" width="16" height="14" patternUnits="userSpaceOnUse"><rect width="16" height="14" fill="#A9D2B9"/><path d="M1 1 L8 12 M15 1 L8 12" stroke="#C9E6D4" stroke-width="5" stroke-linecap="round"/><path d="M1 1 L8 12 M15 1 L8 12" stroke="#93C2A6" stroke-width="1" opacity=".6"/></pattern>
+  <pattern id="rib" width="8" height="10" patternUnits="userSpaceOnUse"><rect width="8" height="10" fill="#9CC8AE"/><rect width="4" height="10" fill="#B9DDC7"/></pattern>
+</defs><rect width="900" height="900" fill="url(#sweep)"/>
+<g filter="url(#paper)"><rect width="900" height="900" fill="#F6EEE2" opacity=".35"/></g>
+<ellipse cx="460" cy="690" rx="330" ry="70" fill="#5A4636" opacity=".22" filter="url(#blur18)"/>
+<polygon points="180,360 450,470 450,620 180,510" fill="url(#faceL)"/>
+<polygon points="450,470 720,360 720,510 450,620" fill="url(#faceR)"/>
+<g filter="url(#paper)"><polygon points="450,250 720,360 450,470 180,360" fill="#FBF6EE"/></g>
+<polygon points="336.6,296.2 379.8,278.6 649.8,388.6 606.6,406.2" fill="#F5D66C"/>
+<polygon points="606.6,406.2 649.8,388.6 649.8,538.6 606.6,556.2" fill="url(#bandR)"/>
+<polygon points="450,250 720,360 450,470 180,360" fill="url(#gloss)" opacity=".55"/>
+<path d="M180 360 L450 470 L720 360" fill="none" stroke="#fff" stroke-width="2" opacity=".8"/>
+<path d="M180 372 L450 482 L720 372" fill="none" stroke="#5A4636" stroke-width="1.5" opacity=".15"/>
+<!-- 윗면 로고 (아이소메트릭 변형) -->
+<g transform="translate(450 360) scale(1 .577) rotate(-45)">
+  <text x="0" y="-8" text-anchor="middle" font-family="'Batang','AppleMyungjo',Georgia,serif" font-size="40" font-weight="700" fill="#403B38">취향수집소</text>
+  <text x="0" y="22" text-anchor="middle" font-family="'Batang','AppleMyungjo',Georgia,serif" font-size="14" letter-spacing="7" fill="#746C67">TASTE ARCHIVE</text>
+</g>
+<g transform="translate(560 425) scale(1 .577) rotate(-45)">
+  <text x="0" y="6" text-anchor="middle" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="15" fill="#403B38">No.0712 · 오늘의 취향 콜라주</text>
+</g>
+<!-- 옆면 스탬프 칸 -->
+<g transform="translate(450 470) skewY(22.2)" fill="none" stroke="#B9AD9C" stroke-width="1.6" stroke-dasharray="3 3">
+  <circle cx="-197" cy="60" r="12"/><circle cx="-159" cy="60" r="12"/><circle cx="-121" cy="60" r="12"/><circle cx="-83" cy="60" r="12"/><circle cx="-45" cy="60" r="12"/><circle cx="-235" cy="100" r="12"/><circle cx="-197" cy="100" r="12"/><circle cx="-159" cy="100" r="12"/><circle cx="-121" cy="100" r="12"/><circle cx="-83" cy="100" r="12"/><circle cx="-45" cy="100" r="12"/>
+</g>
+<g transform="translate(450 470) skewY(22.2)"><circle cx="-235" cy="60" r="12" fill="#F5D66C" stroke="#403B38" stroke-width="1.4"/></g>
+<g transform="translate(450 470) skewY(-22.2)"><text x="40" y="128" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="13" fill="#8A7E70">15 × 15 × 5 cm</text></g>
+<!-- 봉인 스티커 -->
+<g transform="translate(600 420) scale(1 .577) rotate(-45)" filter="url(#shs)"><circle r="24" fill="#D9C5EE" stroke="#fff" stroke-width="3"/><text y="5" text-anchor="middle" font-family="'Batang','AppleMyungjo',Georgia,serif" font-size="13" fill="#403B38">No.1</text></g>
+<g transform="translate(150 620) rotate(-16) scale(0.9)" filter="url(#sh)">
+  <path d="M0 0 C40 6 120 4 210 -4" fill="none" stroke="#5E8A55" stroke-width="7" stroke-linecap="round"/>
+  <path d="M30 2 C70 -40 130 -46 170 -30 C120 -22 80 -10 40 6 Z" fill="#7FA66E"/>
+  <path d="M60 4 C100 30 150 36 190 24 C140 16 100 8 66 0 Z" fill="#6F9A63"/>
+  <path d="M210 -4 C224 -30 262 -34 280 -18 C292 -6 292 10 280 20 C262 34 226 28 210 -4 Z" fill="#F1A2B1"/>
+  <path d="M214 -4 C238 -22 266 -20 278 -6 C266 2 240 4 214 -4 Z" fill="#F6BBC6"/>
+  <path d="M220 -8 C240 -14 258 -14 272 -10" stroke="#fff" stroke-width="2" opacity=".6" fill="none"/>
+</g>
+<g transform="translate(210 650) rotate(-4) scale(0.75)" filter="url(#sh)">
+  <path d="M0 0 C40 6 120 4 210 -4" fill="none" stroke="#5E8A55" stroke-width="7" stroke-linecap="round"/>
+  <path d="M30 2 C70 -40 130 -46 170 -30 C120 -22 80 -10 40 6 Z" fill="#7FA66E"/>
+  <path d="M60 4 C100 30 150 36 190 24 C140 16 100 8 66 0 Z" fill="#6F9A63"/>
+  <path d="M210 -4 C224 -30 262 -34 280 -18 C292 -6 292 10 280 20 C262 34 226 28 210 -4 Z" fill="#D9C5EE"/>
+  <path d="M214 -4 C238 -22 266 -20 278 -6 C266 2 240 4 214 -4 Z" fill="#E9DDF6"/>
+  <path d="M220 -8 C240 -14 258 -14 272 -10" stroke="#fff" stroke-width="2" opacity=".6" fill="none"/>
+</g><rect width="900" height="900" fill="url(#light)"/></svg>

@@ -21,6 +21,23 @@
     toastTimer = setTimeout(() => toastEl.classList.remove('is-show'), 2400);
   }
 
+  /* ---------- 히어로에 흩날리는 튤립 꽃잎 ---------- */
+  const petals = $('#heroPetals');
+  if (petals && !reduceMotion) {
+    const colors = ['#F4AEBB', '#F6BBC6', '#D9C5EE', '#F5D66C', '#F6D5C5'];
+    for (let i = 0; i < 12; i++) {
+      const p = document.createElement('i');
+      p.className = 'petal';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.setProperty('--s', 9 + Math.random() * 9 + 'px');
+      p.style.setProperty('--c', colors[i % colors.length]);
+      p.style.setProperty('--t', 11 + Math.random() * 8 + 's');
+      p.style.setProperty('--sx', Math.random() * 120 - 60 + 'px');
+      p.style.setProperty('--delay', -Math.random() * 18 + 's');
+      petals.appendChild(p);
+    }
+  }
+
   /* ---------- Header & mobile nav ---------- */
   const header = $('#siteHeader');
   const navToggle = $('#navToggle');
@@ -153,7 +170,9 @@
   /* ---------- 실제로 찍히는 QR 코드 → archive.html ---------- */
   const cfg = window.TASTE_CONFIG || {};
   const boxNo = cfg.boxNo || '0712';
-  const archiveUrl = new URL(`archive.html?box=${boxNo}`, cfg.archiveBaseUrl || location.href).href;
+  // 배포 주소를 적었다면 그 주소를, 아니면 지금 열린 주소(GitHub Pages면 자동으로 github.io)를 써요
+  const base = cfg.archiveBaseUrl ? cfg.archiveBaseUrl.replace(/\/?$/, '/') : location.href;
+  const archiveUrl = new URL(`archive.html?box=${boxNo}`, base).href;
 
   function renderQR() {
     const holder = $('#qrCode');
@@ -181,7 +200,7 @@
   if (unreachable) {
     const n = $('#qrNotice');
     n.hidden = false;
-    n.innerHTML = '지금은 PC에서 파일로 열려 있어서 휴대폰이 이 주소에 들어올 수 없어요. 폴더의 <b>serve.bat</b>을 실행해 같은 Wi-Fi 주소로 열거나, <b>js/config.js</b>에 배포한 사이트 주소를 적으면 QR이 휴대폰에서 바로 열려요.';
+    n.innerHTML = '지금은 PC에서 파일로 열려 있어서 휴대폰이 이 QR 주소에 들어올 수 없어요. 사이트를 <b>GitHub Pages</b>에 올린 뒤 그 주소로 열면 QR이 자동으로 바뀌어요. (올리는 방법: 폴더의 <b>readme.md</b>)';
   }
 
   /* ---------- 키트 구성품: 번호 핀 ↔ 목록 ---------- */

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 260" role="img" aria-label="손그림 튤립">
+  <defs>
+    <!-- 크레용/색연필 질감: 가장자리를 흔들고 미세한 종이 결을 뚫어 줌 -->
+    <filter id="crayon" x="-15%" y="-10%" width="130%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="11" result="w"/>
+      <feDisplacementMap in="SourceGraphic" in2="w" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="4" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 2.4 -0.25" result="m"/>
+      <feComposite in="d" in2="m" operator="in"/>
+    </filter>
+    <filter id="line" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="2" seed="6" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#crayon)">
+    <!-- 잎 -->
+    <path d="M58 250 C30 226 20 178 28 132 C40 172 52 208 61 240 Z" fill="#6F9A63"/>
+    <path d="M62 250 C92 222 100 186 94 150 C82 186 70 212 59 242 Z" fill="#82AB72"/>
+    <!-- 줄기 -->
+    <path d="M60 252 C57 205 63 160 60 106" fill="none" stroke="#5E8A55" stroke-width="5.5" stroke-linecap="round"/>
+    <!-- 꽃잎 -->
+    <path d="M60 46 C76 70 76 100 60 112 C44 100 44 70 60 46 Z" fill="#F6BBC6"/>
+    <path d="M60 110 C35 106 28 82 33 52 C44 63 53 68 61 74 Z" fill="#F1A2B1"/>
+    <path d="M60 110 C85 106 92 82 87 52 C76 63 67 68 59 74 Z" fill="#F4AEBB"/>
+  </g>
+  <!-- 손그림 선과 하이라이트 -->
+  <g filter="url(#line)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 110 C35 106 28 82 33 52 C44 63 53 68 61 74" stroke="#D97E91" stroke-width="1.6" opacity=".8"/>
+    <path d="M60 110 C85 106 92 82 87 52 C76 63 67 68 59 74" stroke="#D97E91" stroke-width="1.6" opacity=".8"/>
+    <path d="M40 66 C42 80 46 92 52 100" stroke="#FFF1F3" stroke-width="2.4" opacity=".75"/>
+    <path d="M58 58 C57 70 57 82 59 92" stroke="#FFF6F7" stroke-width="2" opacity=".7"/>
+    <path d="M36 150 C40 180 48 205 57 232" stroke="#A9C99A" stroke-width="1.6" opacity=".7"/>
+  </g>
+</svg>
