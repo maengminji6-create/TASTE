@@ -73,10 +73,10 @@
         <tbody>
           <tr>
             <td><b>입장 모션</b></td>
-            <td>바닥에서 손그림 튤립이 쑥쑥 자라고 꽃잎이 흩날리는 가운데, 상자가 떨어져 통통 튀고, 뚜껑이 열리며 종이 조각·별·하트가 터진 뒤 로고 글자가 하나씩 튀어나와요. 동그랗게 막이 열리면 히어로가 차례로 등장해요.</td>
+            <td>은은한 수채 번짐 위로 손그림 튤립이 천천히 자라고 꽃잎이 흩날려요. 연필선처럼 흐린 상자가 안개처럼 스며들고, 뚜껑이 부드럽게 열리며 종이 조각이 둥실 피어올라요. 로고는 흐릿함에서 또렷해지고, 안개가 걷히듯 페이지가 나타나요.</td>
             <td><code>#intro</code><br><code>&lt;head&gt;</code> 인라인 스크립트</td>
-            <td><code>.intro</code> <code>@keyframes boxDrop · flapL/R · pop · letterPop · irisOut</code><br><code>.intro-reveal</code></td>
-            <td><b>intro.js</b> — 종이 조각 44개·반짝이 14개·꽃잎 22개를 무작위로 만들고, 3.3초 뒤(또는 건너뛰기·Esc) 막을 닫아요. 매번 재생돼요.</td>
+            <td><code>.intro</code> <code>@keyframes boxIn · flapL/R · drift · letterIn · introOut</code><br>상자 선: SVG <code>#ibLine</code>(흔들림+흐림) · 면: <code>#ibGrain</code>(크레용 질감)</td>
+            <td><b>intro.js</b> — 종이 조각 22개·반짝이 8개·꽃잎 12개를 무작위로 만들고, 3.6초 뒤(또는 건너뛰기·Esc) 1초 동안 흐려지며 사라져요. 매번 재생돼요.</td>
           </tr>
           <tr>
             <td><b>헤더 · 메뉴</b></td>
