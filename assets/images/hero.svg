@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 680" role="img" aria-label="뚜껑이 열린 취향수집소 상자와 물음표 카드, 티켓">
+  <defs>
+    <filter id="wash" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="4" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="60" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="grain" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="7" result="w"/>
+      <feDisplacementMap in="SourceGraphic" in2="w" scale="7" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="2" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 2.6 -0.35" result="m"/>
+      <feComposite in="d" in2="m" operator="in"/>
+    </filter>
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <!-- watercolor wash -->
+  <g filter="url(#wash)" opacity=".85">
+    <ellipse cx="420" cy="420" rx="300" ry="220" fill="#F6D5C5"/>
+    <ellipse cx="560" cy="300" rx="140" ry="110" fill="#F6D5C5"/>
+    <ellipse cx="230" cy="560" rx="120" ry="70" fill="#D9C5EE" opacity=".6"/>
+  </g>
+
+  <!-- fills -->
+  <g filter="url(#grain)">
+    <polygon points="200,360 390,290 300,215 110,295" fill="#F5D66C"/>
+    <polygon points="390,290 640,350 725,275 555,215" fill="#F6D5C5"/>
+    <polygon points="200,360 450,430 640,350 390,290" fill="#FBE9DD"/>
+    <polygon points="200,360 450,430 450,630 205,560" fill="#D9C5EE"/>
+    <polygon points="450,430 640,350 635,545 450,630" fill="#B9DDC7"/>
+    <g transform="rotate(-8 360 175)"><rect x="295" y="85" width="130" height="170" rx="12" fill="#FDF1EA"/></g>
+    <g transform="rotate(9 570 140)"><rect x="480" y="95" width="180" height="90" rx="10" fill="#F5D66C"/></g>
+    <circle cx="232" cy="235" r="28" fill="#B9DDC7"/>
+    <polygon points="650,180 676,170 668,198" fill="#D9C5EE"/>
+  </g>
+
+  <!-- ink lines -->
+  <g filter="url(#rough)" fill="none" stroke="#403B38" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" opacity=".85">
+    <polygon points="200,360 390,290 300,215 110,295"/>
+    <polygon points="390,290 640,350 725,275 555,215"/>
+    <polygon points="200,360 450,430 640,350 390,290"/>
+    <polygon points="200,360 450,430 450,630 205,560"/>
+    <polygon points="450,430 640,350 635,545 450,630"/>
+    <g transform="rotate(-8 360 175)"><rect x="295" y="85" width="130" height="170" rx="12"/></g>
+    <g transform="rotate(9 570 140)">
+      <rect x="480" y="95" width="180" height="90" rx="10"/>
+      <line x1="625" y1="105" x2="625" y2="175" stroke-dasharray="6 8" stroke-width="2.5"/>
+    </g>
+    <polygon points="650,180 676,170 668,198" stroke-width="2.5"/>
+    <path d="M160 470 q30 -22 62 -6" stroke-width="3"/>
+  </g>
+
+  <g fill="#403B38" opacity=".75" font-family="Georgia, 'Batang', serif">
+    <text x="345" y="200" font-size="64" transform="rotate(-8 360 175)">?</text>
+    <text x="510" y="152" font-size="24" letter-spacing="3" transform="rotate(9 570 140)">TICKET</text>
+  </g>
+  <text x="330" y="560" font-size="26" fill="#403B38" opacity=".55" transform="rotate(16 330 560)" font-family="'Malgun Gothic', sans-serif">취향수집소</text>
+</svg>

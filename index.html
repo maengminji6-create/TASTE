@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>오늘의 취향 콜라주 · 취향수집소</title>
+  <meta name="description" content="세 장의 질문 카드에 답하고, 지금의 나를 닮은 색과 조각으로 손바닥만 한 콜라주를 만들어요. 취향수집소 첫 번째 상자, 오늘의 취향 콜라주.">
+  <meta property="og:title" content="오늘의 취향 콜라주 · 취향수집소">
+  <meta property="og:description" content="아직 몰랐던 나를 수집하는 시간. 만들고 끝나는 키트가 아니라, 기록으로 남는 취향.">
+  <meta property="og:image" content="assets/images/hero.svg">
+  <meta name="theme-color" content="#FFF9EF">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* 입장 모션: 첫 화면이 보이기 전에 덮어 두기. 모션 줄이기 설정이거나 #링크로 들어오면 생략 */
+    (function () {
+      var r = document.documentElement;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || location.hash) return;
+      r.classList.add('intro-pending');
+      setTimeout(function () { r.classList.remove('intro-pending'); }, 6000); // 안전장치
+    })();
+  </script>
+</head>
+<body>
+  <!-- 입장 모션: 상자가 열리고 종이 조각이 터지며 로고 등장 (js/intro.js) -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro-stage">
+      <div class="intro-confetti" id="introConfetti"></div>
+      <svg class="intro-box" viewBox="0 0 200 180">
+        <g class="ib-body">
+          <polygon points="30,70 100,95 100,170 32,145" fill="#D9C5EE"/>
+          <polygon points="100,95 170,70 168,145 100,170" fill="#B9DDC7"/>
+          <polygon points="30,70 100,95 170,70 100,48" fill="#FBE9DD"/>
+          <g fill="none" stroke="#403B38" stroke-width="3" stroke-linejoin="round">
+            <polygon points="30,70 100,95 100,170 32,145"/><polygon points="100,95 170,70 168,145 100,170"/>
+          </g>
+        </g>
+        <g class="ib-flap ib-flap-l"><polygon points="30,70 100,48 82,22 12,44" fill="#F5D66C" stroke="#403B38" stroke-width="3" stroke-linejoin="round"/></g>
+        <g class="ib-flap ib-flap-r"><polygon points="100,48 170,70 188,44 118,22" fill="#F6D5C5" stroke="#403B38" stroke-width="3" stroke-linejoin="round"/></g>
+      </svg>
+      <p class="intro-logo" id="introLogo">취향수집소</p>
+      <p class="intro-slogan">아직 몰랐던 나를 수집하는 시간</p>
+    </div>
+    <button type="button" class="intro-skip" id="introSkip">건너뛰기</button>
+  </div>
+
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="취향수집소 처음으로">
+        <img src="assets/images/favicon.svg" alt="" width="30" height="30">
+        <span class="logo-ko">취향수집소</span>
+        <span class="logo-en">TASTE ARCHIVE</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+        <span class="sr-only">메뉴 열기</span><span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="주요 메뉴">
+        <a href="#features">특징</a>
+        <a href="#how">사용 방법</a>
+        <a href="#gallery">상황별 사진</a>
+        <a href="#calendar">이벤트 캘린더</a>
+        <a href="#video">홍보 영상</a>
+        <a href="#ads">광고 시안</a>
+        <a href="#reviews">리뷰</a>
+        <a href="#buy" class="nav-cta">구매하기</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== 1. Hero : 상단 메인 이미지 ===== -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">취향 샘플러 · 첫 번째 상자</p>
+          <h1>오늘의 <span class="underline">취향 콜라주</span></h1>
+          <p class="lead">세 장의 질문 카드에 답하고, 지금의 나를 닮은 색과 조각으로 손바닥만 한 콜라주를 만들어요. 다 만들면 뚜껑 안쪽의 QR을 찍어 첫 번째 취향을 기록해요.</p>
+          <ul class="chips" aria-label="상품 요약">
+            <li>약 30분</li>
+            <li>손맛 <b aria-hidden="true">●○○</b> 처음도 괜찮아요</li>
+            <li>스탬프 1개</li>
+            <li>14세 이상</li>
+          </ul>
+          <a class="hero-rating" href="#reviews" aria-label="평점 5점 만점에 4.8점, 리뷰 5,000개 이상">
+            <span class="stars" style="--rate:96%" aria-hidden="true"></span><b>4.8</b><span class="muted">리뷰 5,000+</span>
+          </a>
+          <div class="hero-price">
+            <span class="price-label">단품 · 1회 체험</span>
+            <strong class="price">7,900<small>원</small></strong>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#buy">지금 구매하기</a>
+            <a class="btn btn-ghost" href="#how">만드는 법 보기</a>
+          </div>
+          <p class="hand">완벽하게 만들지 않아도 괜찮아요.</p>
+        </div>
+        <figure class="hero-visual reveal">
+          <img src="assets/images/hero.svg" alt="뚜껑이 열린 취향수집소 상자 위로 물음표 카드와 티켓이 떠오르는 일러스트" width="800" height="680" fetchpriority="high">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== 2. 제품 특징 3가지 ===== -->
+    <section class="section" id="features">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">왜 취향수집소일까요</p>
+          <h2>만들고 끝나는 키트가 아니라,<br class="br-md"> 기록으로 남는 취향</h2>
+          <p class="section-desc">재료를 예쁘게 담은 상자에서 멈추지 않아요. <b>취향 선택 → 직접 체험 → 기록</b>이 한 상자 안에서 이어져요.</p>
+        </header>
+        <ol class="feature-grid">
+          <li class="feature-card tone-butter reveal">
+            <span class="feature-num">01</span>
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M8 18 24 10l16 8v18l-16 8-16-8z"/><path d="M8 18l16 8 16-8M24 26v18"/></svg>
+            </div>
+            <h3>열면 바로 시작하는 상자</h3>
+            <p>미리 잘라 둔 색종이와 종이 조각, 스티커, 딱풀까지. 검색하고 재료를 고를 필요 없이 뚜껑만 열면 30분 만에 완성해요.</p>
+            <p class="feature-tag">재료 준비 0분</p>
+          </li>
+          <li class="feature-card tone-peach reveal">
+            <span class="feature-num">02</span>
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><rect x="10" y="8" width="22" height="30" rx="3"/><rect x="18" y="12" width="22" height="30" rx="3"/><path d="M25 22c0-3 6-3 6 0 0 2-3 2-3 5M28 31v.5"/></svg>
+            </div>
+            <h3>질문 세 개로 고르는 나의 색</h3>
+            <p>오늘의 색, 오늘의 단어, 지금 하고 싶은 일. 질문 카드에 먼저 답하고, 그 색을 중심으로 손이 가는 조각을 붙이면 그게 오늘의 취향이에요.</p>
+            <p class="feature-tag">정답 없는 콜라주</p>
+          </li>
+          <li class="feature-card tone-lilac reveal">
+            <span class="feature-num">03</span>
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><rect x="8" y="8" width="12" height="12"/><rect x="28" y="8" width="12" height="12"/><rect x="8" y="28" width="12" height="12"/><path d="M28 28h5v5h-5zM35 35h5v5h-5zM28 38v2M38 28v2"/></svg>
+            </div>
+            <h3>QR 한 번이면 쌓이는 취향 아카이브</h3>
+            <p>뚜껑 안쪽 QR을 찍으면 나의 취향 아카이브가 열려요. 앱 설치도 회원가입도 없이 5분. 기록이 쌓일수록 다음 상자가 나를 닮아 가요.</p>
+            <p class="feature-tag">앱 설치 · 회원가입 없음</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 3. 사용 방법 ===== -->
+    <section class="section section-tint" id="how">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">사용 방법</p>
+          <h2>열고, 답하고, 붙이고, 남기면 끝</h2>
+          <p class="section-desc">상자는 위에서부터 꺼내는 순서대로 담겨 있어요. 화면 순서대로 따라 하면 돼요.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <div class="step-img"><img src="assets/images/product-box.svg" alt="닫힌 취향수집소 상자" loading="lazy" width="800" height="800"></div>
+            <div class="step-body">
+              <span class="step-num">STEP 1</span>
+              <h3>상자 열기</h3>
+              <p>뚜껑 안쪽의 QR 카드부터 확인해요. 상자마다 다른 번호가 나의 아카이브와 연결돼요.</p>
+              <span class="step-time">약 1분</span>
+            </div>
+          </li>
+          <li class="step reveal">
+            <div class="step-img"><img src="assets/images/kit-real.svg" alt="질문 카드 3장과 키트 구성품" loading="lazy" width="800" height="800"></div>
+            <div class="step-body">
+              <span class="step-num">STEP 2</span>
+              <h3>질문 카드 3장에 답하기</h3>
+              <p>오늘의 색, 오늘의 단어, 지금 하고 싶은 일. 고른 색의 바탕 종이를 골라요.</p>
+              <span class="step-time">약 2분</span>
+            </div>
+          </li>
+          <li class="step reveal">
+            <div class="step-img"><img src="assets/images/scene-desk.svg" alt="콜라주를 붙이는 손" loading="lazy" width="800" height="600"></div>
+            <div class="step-body">
+              <span class="step-num">STEP 3</span>
+              <h3>올려 보고, 붙이기</h3>
+              <p>조각을 이리저리 올려 보며 자리를 찾고, 딱풀과 스티커로 마무리해요. 기록 카드에 제목과 오늘의 한 문장도 적어요.</p>
+              <span class="step-time">약 25분</span>
+            </div>
+          </li>
+          <li class="step reveal">
+            <div class="step-img"><img src="assets/images/scene-record.svg" alt="휴대폰으로 QR을 찍어 기록하는 장면" loading="lazy" width="800" height="600"></div>
+            <div class="step-body">
+              <span class="step-num">STEP 4</span>
+              <h3>QR로 기록하기</h3>
+              <p>휴대폰 기본 카메라로 QR을 비추고, 답과 작품 사진, 한 문장을 남겨요. 마지막으로 상자 옆면에 스탬프를 붙여요.</p>
+              <span class="step-time">약 5분</span>
+            </div>
+          </li>
+        </ol>
+
+        <!-- 구성품 (실사형 플랫레이 + 번호 안내) -->
+        <div class="kit reveal" id="kit">
+          <div class="kit-head">
+            <h3 class="sub-title">상자 속 구성 · 9가지</h3>
+            <p class="muted">번호에 손을 올리거나 목록을 누르면 어디 있는지 알려 드려요.</p>
+          </div>
+          <div class="kit-body">
+            <figure class="kit-photo">
+              <img src="assets/images/kit-real.svg" alt="키트 구성품을 리넨 위에 펼쳐 놓은 플랫레이" loading="lazy" width="1000" height="760">
+              <button class="kit-pin" data-k="1" style="--x:8%;--y:7%">1</button>
+              <button class="kit-pin" data-k="2" style="--x:42%;--y:5%">2</button>
+              <button class="kit-pin" data-k="3" style="--x:67%;--y:8%">3</button>
+              <button class="kit-pin" data-k="4" style="--x:6%;--y:55%">4</button>
+              <button class="kit-pin" data-k="5" style="--x:39%;--y:50%">5</button>
+              <button class="kit-pin" data-k="6" style="--x:62%;--y:44%">6</button>
+              <button class="kit-pin" data-k="7" style="--x:62%;--y:58%">7</button>
+              <button class="kit-pin" data-k="8" style="--x:74%;--y:85%">8</button>
+              <button class="kit-pin" data-k="9" style="--x:91%;--y:79%">9</button>
+            </figure>
+            <ol class="kit-list">
+              <li data-k="1"><b>상자</b><span>15×15×5cm · 뚜껑에 상자 번호와 스탬프 칸 12개</span></li>
+              <li data-k="2"><b>QR 카드</b><span>상자 번호로 나의 취향 아카이브와 바로 연결</span></li>
+              <li data-k="3"><b>질문 카드 3장</b><span>오늘의 색 · 오늘의 단어 · 지금 하고 싶은 일</span></li>
+              <li data-k="4"><b>재료 봉투</b><span>미리 자른 색종이·패턴지 24장, 가위가 필요 없어요</span></li>
+              <li data-k="5"><b>스티커 시트</b><span>브랜드 컬러 다이컷 스티커 18개</span></li>
+              <li data-k="6"><b>딱풀 8g</b><span>종이가 울지 않는 고체풀</span></li>
+              <li data-k="7"><b>기록 카드</b><span>제목·날짜·오늘의 한 문장을 손으로 적는 모눈 카드</span></li>
+              <li data-k="8"><b>스탬프 스티커</b><span>완성하면 뚜껑 스탬프 칸에 붙이는 No.1 스티커</span></li>
+              <li data-k="9"><b>작은 장식</b><span>마스킹테이프 1m · 단추 3개</span></li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- 질문 카드 미리 풀어 보기 -->
+        <div class="quiz reveal" id="quiz">
+          <div class="quiz-questions">
+            <h3 class="sub-title">질문 카드 미리 풀어 보기</h3>
+            <p class="muted">고르는 대로 오른쪽 기록 카드가 채워져요.</p>
+
+            <fieldset class="q-card">
+              <legend><span class="q-no">Q1.</span> 오늘 기분에 가장 가까운 색은?</legend>
+              <div class="q-options">
+                <label><input type="radio" name="color" value="butter" data-label="버터 옐로" checked><span><i style="--c:var(--butter)"></i>버터 옐로</span></label>
+                <label><input type="radio" name="color" value="lilac" data-label="라일락"><span><i style="--c:var(--lilac)"></i>라일락</span></label>
+                <label><input type="radio" name="color" value="mint" data-label="세이지 민트"><span><i style="--c:var(--mint)"></i>세이지 민트</span></label>
+                <label><input type="radio" name="color" value="peach" data-label="피치"><span><i style="--c:var(--peach)"></i>피치</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="q-card">
+              <legend><span class="q-no">Q2.</span> 오늘 하루를 한 단어로 고른다면?</legend>
+              <div class="q-options">
+                <label><input type="radio" name="word" value="조용한"><span>조용한</span></label>
+                <label><input type="radio" name="word" value="말랑한" checked><span>말랑한</span></label>
+                <label><input type="radio" name="word" value="반짝이는"><span>반짝이는</span></label>
+                <label><input type="radio" name="word" value="밖으로"><span>밖으로</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="q-card">
+              <legend><span class="q-no">Q3.</span> 지금 가장 하고 싶은 일은?</legend>
+              <div class="q-options">
+                <label><input type="radio" name="todo" value="make" checked><span>손으로 무언가 만들기</span></label>
+                <label><input type="radio" name="todo" value="see"><span>무언가를 보러 가기</span></label>
+                <label><input type="radio" name="todo" value="walk"><span>낯선 곳 걷기</span></label>
+                <label><input type="radio" name="todo" value="write"><span>조용히 끄적이기</span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <aside class="record-card" aria-live="polite">
+            <p class="eyebrow">나의 취향 아카이브 · 기록 카드</p>
+            <div class="record-art" id="recordArt" aria-hidden="true">
+              <span class="ra ra-1"></span><span class="ra ra-2"></span><span class="ra ra-3"></span>
+            </div>
+            <h4 class="record-title" id="recordTitle">말랑한 손끝의 버터 옐로</h4>
+            <ul class="record-tags" id="recordTags"></ul>
+            <p class="record-quote hand" id="recordQuote">“오늘은 대충 해도 예쁜 날.”</p>
+            <div class="record-next">
+              <span>다음 달 상자 미리보기</span>
+              <b id="recordNext">향 블렌딩 키트 · 나만의 향 만들기</b>
+            </div>
+          </aside>
+        </div>
+
+        <!-- 실제로 찍을 수 있는 QR → archive.html (나의 취향 아카이브) -->
+        <div class="qr-try reveal" id="qrTry">
+          <div class="qr-card">
+            <p class="qr-card-top">나의 취향 아카이브</p>
+            <div class="qr-code" id="qrCode" role="img" aria-label="나의 취향 아카이브로 연결되는 QR 코드"></div>
+            <p class="qr-card-no">No.0712</p>
+          </div>
+          <div class="qr-body">
+            <p class="eyebrow">QR 기록 체험</p>
+            <h3 class="sub-title">휴대폰 카메라로 지금 찍어 보세요</h3>
+            <p class="muted">상자 뚜껑 안쪽의 QR과 같은 기록 페이지가 열려요. 키트를 다 만든 뒤 아래 순서로 5분이면 기록이 끝나요.</p>
+            <ol class="qr-steps">
+              <li><b>답하기</b>질문 카드 3장에 적은 색·단어·하고 싶은 일</li>
+              <li><b>사진</b>완성한 콜라주를 위에서 한 장</li>
+              <li><b>기록</b>제목·날짜·오늘의 한 문장, 쓴 재료, 걸린 시간, 만족도</li>
+              <li><b>다음 취향</b>해 보고 싶은 경험 3개 → 다음 상자 추천과 스탬프</li>
+            </ol>
+            <p class="qr-notice" id="qrNotice" hidden></p>
+            <div class="btn-row">
+              <a class="btn btn-primary" id="qrOpen" href="archive.html?box=0712">이 기기에서 기록 페이지 열기</a>
+            </div>
+            <p class="qr-url small muted">연결 주소 · <a id="qrLink" href="archive.html?box=0712"></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. 상황별 사진 (제품 · 상황별 · 모델) ===== -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">제품 이미지</p>
+          <h2>이런 순간에 열어 보세요</h2>
+          <p class="section-desc">제품 사진, 상황별 사진, 모델 사진을 한곳에 모았어요. 사진을 누르면 크게 볼 수 있어요.</p>
+        </header>
+
+        <div class="tabs reveal" role="tablist" aria-label="사진 분류">
+          <button role="tab" class="tab is-active" aria-selected="true" data-filter="all">전체</button>
+          <button role="tab" class="tab" aria-selected="false" data-filter="product">제품 사진</button>
+          <button role="tab" class="tab" aria-selected="false" data-filter="scene">상황별 사진</button>
+          <button role="tab" class="tab" aria-selected="false" data-filter="model">모델 사진</button>
+        </div>
+
+        <ul class="gallery-grid" id="galleryGrid">
+          <li class="g-item g-wide" data-cat="scene">
+            <button class="g-btn" data-full="assets/images/scene-desk.svg">
+              <img src="assets/images/scene-desk.svg" alt="햇살 드는 오후의 책상 위에서 콜라주를 붙이는 손" loading="lazy" width="800" height="600">
+              <span class="g-cap"><em>상황 · 혼자만의 오후</em>창가 책상에서 30분, 나에게 집중하는 시간</span>
+            </button>
+          </li>
+          <li class="g-item" data-cat="product">
+            <button class="g-btn" data-full="assets/images/kit-real.svg">
+              <img src="assets/images/kit-real.svg" alt="키트 구성품 플랫레이" loading="lazy" width="1000" height="760">
+              <span class="g-cap"><em>제품 · 구성품</em>상자 하나에 필요한 모든 것</span>
+            </button>
+          </li>
+          <li class="g-item g-tall" data-cat="model">
+            <button class="g-btn" data-full="assets/images/model.svg">
+              <img src="assets/images/model.svg" alt="완성한 콜라주 엽서를 들고 웃는 모델" loading="lazy" width="600" height="750">
+              <span class="g-cap"><em>모델 · 지우, 24세</em>“생각보다 잘 만들었는데요?”</span>
+            </button>
+          </li>
+          <li class="g-item" data-cat="product">
+            <button class="g-btn" data-full="assets/images/product-box.svg">
+              <img src="assets/images/product-box.svg" alt="스탬프 칸이 있는 닫힌 상자" loading="lazy" width="800" height="800">
+              <span class="g-cap"><em>제품 · 패키지</em>15×15×5cm, 손바닥 위의 상자</span>
+            </button>
+          </li>
+          <li class="g-item" data-cat="scene">
+            <button class="g-btn" data-full="assets/images/scene-gift.svg">
+              <img src="assets/images/scene-gift.svg" alt="리본을 묶은 상자와 for you 태그" loading="lazy" width="800" height="600">
+              <span class="g-cap"><em>상황 · 선물할 때</em>“네 취향이 궁금해” 한 줄과 함께</span>
+            </button>
+          </li>
+          <li class="g-item" data-cat="scene">
+            <button class="g-btn" data-full="assets/images/scene-record.svg">
+              <img src="assets/images/scene-record.svg" alt="QR로 기록하는 장면" loading="lazy" width="800" height="600">
+              <span class="g-cap"><em>상황 · 기록할 때</em>완성 직후, 휴대폰으로 5분</span>
+            </button>
+          </li>
+          <li class="g-item" data-cat="scene">
+            <button class="g-btn" data-full="assets/images/scene-wall.svg">
+              <img src="assets/images/scene-wall.svg" alt="벽에 붙여 모은 달마다의 콜라주 엽서" loading="lazy" width="800" height="600">
+              <span class="g-cap"><em>상황 · 모아 둘 때</em>한 달에 한 장, 벽에 쌓이는 취향 도감</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 4-1. 12달 이벤트 캘린더 (뒤집는 월 시트) ===== -->
+    <section class="section section-tint" id="calendar">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">취향 탐험대 · 12달 캘린더</p>
+          <h2>달마다 어떤 상자가 올까요?</h2>
+          <p class="section-desc">벽에 붙은 월 시트를 눌러 뒤집어 보세요. 그 달에 오는 상자와 이벤트가 숨어 있어요.</p>
+        </header>
+        <div class="cal-tools reveal">
+          <button type="button" class="btn btn-ghost" id="calFlipAll" aria-pressed="false">전부 뒤집어 보기</button>
+          <p class="muted small"><span class="cal-legend plus"></span>플러스 한정 · 상자 정체는 매달 1일 색·키워드 힌트로 먼저 공개돼요.</p>
+        </div>
+        <ol class="cal-grid" id="calGrid"></ol>
+        <noscript><p class="muted">자바스크립트를 켜면 월별 이벤트를 볼 수 있어요.</p></noscript>
+      </div>
+    </section>
+
+    <!-- ===== 5. 홍보 영상 ===== -->
+    <section class="section" id="video">
+      <div class="container video-grid">
+        <header class="section-head reveal">
+          <p class="eyebrow">홍보 영상 · 24초 릴스</p>
+          <h2>왜 취향수집소여야 할까요?</h2>
+          <p class="section-desc">고민을 꺼내고, 상자 속 키트를 하나씩 보여 주고, 고를 이유 네 가지로 마무리하는 세로형 광고 영상이에요. 장면을 누르면 그 부분부터 재생돼요.</p>
+          <ol class="scene-list" id="sceneList">
+            <li data-at="0"><b>0–3초</b><span><em>고민</em>새 취미, 준비하다 지치셨죠?</span></li>
+            <li data-at="3"><b>3–9초</b><span><em>메리트 1 · 키트</em>재료 준비 0분, 상자에 다 들어 있어요</span></li>
+            <li data-at="9"><b>9–13초</b><span><em>메리트 2</em>30분이면 완성, 실패 없는 콜라주</span></li>
+            <li data-at="13"><b>13–17초</b><span><em>메리트 3</em>만들고 끝이 아니라 기록으로 남아요</span></li>
+            <li data-at="17"><b>17–21초</b><span><em>메리트 4</em>커피 두 잔 값, 선물로도 딱</span></li>
+            <li data-at="21"><b>21–24초</b><span><em>행동</em>첫 상자 7,900원으로 시작하기</span></li>
+          </ol>
+        </header>
+
+        <div class="reel reveal">
+          <div class="reel-frame" id="reel">
+            <!-- 실제 영상(assets/video/promo.mp4)이 있으면 JS가 이 video를 보여주고, 없으면 아래 스토리보드 애니메이션을 재생해요 -->
+            <video class="reel-video" id="reelVideo" playsinline muted preload="metadata" poster="assets/images/kit-real.svg" hidden>
+              <source src="assets/video/promo.mp4" type="video/mp4">
+            </video>
+            <div class="reel-board" id="reelBoard">
+              <div class="clip is-active" data-start="0" data-end="3">
+                <img src="assets/images/hero.svg" alt="">
+                <p class="clip-label">고민</p>
+                <p class="clip-text hand">새 취미, 준비하다<br>지치셨죠?</p>
+                <ul class="clip-points"><li>검색하고</li><li>재료 사고</li><li>결국 미루고…</li></ul>
+              </div>
+              <div class="clip clip-kit" data-start="3" data-end="9">
+                <img src="assets/images/kit-real.svg" alt="">
+                <p class="clip-label">MERIT 01 · 키트</p>
+                <p class="clip-text">재료 준비 0분,<br>상자에 다 들어 있어요</p>
+                <ul class="clip-points kit-points">
+                  <li><i style="--c:var(--lilac)"></i>QR 카드</li>
+                  <li><i style="--c:var(--butter)"></i>질문 카드 3장</li>
+                  <li><i style="--c:var(--peach)"></i>재단 색종이 24장</li>
+                  <li><i style="--c:var(--mint)"></i>스티커 18개</li>
+                  <li><i style="--c:var(--lilac)"></i>딱풀 · 기록 카드</li>
+                  <li><i style="--c:var(--butter)"></i>테이프 · 단추</li>
+                </ul>
+              </div>
+              <div class="clip" data-start="9" data-end="13">
+                <img src="assets/images/scene-desk.svg" alt="">
+                <p class="clip-label">MERIT 02</p>
+                <p class="clip-text">30분이면 완성,<br>실패 없는 콜라주</p>
+                <ul class="clip-points"><li>가위 필요 없음</li><li>정답 없음</li><li>처음도 OK</li></ul>
+              </div>
+              <div class="clip" data-start="13" data-end="17">
+                <img src="assets/images/scene-record.svg" alt="">
+                <p class="clip-label">MERIT 03</p>
+                <p class="clip-text">만들고 끝이 아니라<br>기록으로 남아요</p>
+                <ul class="clip-points"><li>QR 한 번 · 5분</li><li>앱 설치 없음</li><li>다음 상자가 나를 닮아요</li></ul>
+              </div>
+              <div class="clip" data-start="17" data-end="21">
+                <img src="assets/images/scene-gift.svg" alt="">
+                <p class="clip-label">MERIT 04</p>
+                <p class="clip-text">커피 두 잔 값,<br>선물로도 딱</p>
+                <ul class="clip-points"><li>단품 7,900원</li><li>선물 포장 +1,000원</li><li>매달 구독도 가능</li></ul>
+              </div>
+              <div class="clip" data-start="21" data-end="24.01">
+                <img src="assets/images/product-box.svg" alt="">
+                <p class="clip-text hand">아직 몰랐던 나를<br>수집하는 시간</p>
+                <div class="end-card"><span>취향수집소</span><small>첫 상자 7,900원 · 지금 시작하기</small></div>
+              </div>
+            </div>
+            <button class="reel-play" id="reelPlay" aria-label="영상 재생">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+            </button>
+            <div class="reel-ui">
+              <div class="reel-progress" id="reelProgress"><span></span></div>
+              <span class="reel-time" id="reelTime">0:00 / 0:24</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. 포스터 · 광고 시안 ===== -->
+    <section class="section section-tint" id="ads">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">포스터 · 광고 시안</p>
+          <h2>피드에서 이렇게 만나요</h2>
+          <p class="section-desc">인스타그램 피드 포스터, 스토리 광고, 카드뉴스를 실제 화면처럼 목업으로 담았어요.</p>
+        </header>
+
+        <div class="ads-grid">
+          <!-- Feed post -->
+          <figure class="mock mock-feed reveal">
+            <div class="ig">
+              <div class="ig-head"><span class="ig-avatar"><img src="assets/images/favicon.svg" alt=""></span><b>taste.archive</b><span class="ig-sponsored">광고</span></div>
+              <div class="poster poster-feed">
+                <div class="poster-wash" aria-hidden="true"></div>
+                <p class="poster-kicker">취향수집소 · 첫 번째 상자</p>
+                <p class="poster-title">아직 몰랐던<br>나를 수집하는 시간.</p>
+                <img src="assets/images/hero.svg" alt="" class="poster-img">
+                <p class="poster-foot"><span>오늘의 취향 콜라주</span><b>7,900원</b></p>
+              </div>
+              <div class="ig-actions" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-3.2-6.4L20 4l-.6 4A8 8 0 0 1 20 12z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M21 3 3 10l7 3 3 7z"/></svg>
+                <svg class="ig-save" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+              </div>
+              <p class="ig-cap"><b>taste.archive</b> 오늘의 나를 세 가지 색으로 표현해 봤어요. 여러분의 오늘 색은? 댓글로 남겨 주세요 💛 <span>#취향수집소 #오늘의취향콜라주 #다꾸</span></p>
+              <a class="ig-cta" href="#buy">자세히 보기 <span aria-hidden="true">›</span></a>
+            </div>
+            <figcaption>인스타그램 피드 · 4:5</figcaption>
+          </figure>
+
+          <!-- Story -->
+          <figure class="mock mock-story reveal">
+            <div class="phone">
+              <div class="poster poster-story">
+                <div class="story-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="poster-wash" aria-hidden="true"></div>
+                <p class="poster-kicker">매달 도착하는 미스터리 경험 상자</p>
+                <p class="poster-title hand">내 취향이<br>상자에 담긴다면?</p>
+                <img src="assets/images/kit-real.svg" alt="" class="poster-img">
+                <ul class="story-chips"><li>30분</li><li>QR 기록</li><li>앱 설치 없음</li></ul>
+                <a class="story-cta" href="#buy">위로 밀어 구매하기</a>
+              </div>
+            </div>
+            <figcaption>스토리 · 릴스 광고 · 9:16</figcaption>
+          </figure>
+
+          <!-- Card news -->
+          <figure class="mock mock-cards reveal">
+            <div class="cardnews" id="cardnews" tabindex="0" aria-label="카드뉴스 4장, 옆으로 넘겨 보세요">
+              <div class="cn cn-1"><span class="cn-no">1/4 · 문제</span><p class="cn-title">취미, 시작하려다<br>또 미뤘나요?</p><p>검색하고, 재료 사고, 준비하다 지쳐 버리는 우리.</p></div>
+              <div class="cn cn-2"><span class="cn-no">2/4 · 해결</span><p class="cn-title">열면 바로<br>시작하는 작은 상자</p><p>재료는 다 잘라 두었어요. 30분이면 충분해요.</p></div>
+              <div class="cn cn-3"><span class="cn-no">3/4 · 차별점</span><p class="cn-title">만들고 끝나지 않아요,<br>QR 취향 기록</p><p>기록이 쌓일수록 다음 상자가 나를 닮아 가요.</p></div>
+              <div class="cn cn-4"><span class="cn-no">4/4 · 행동</span><p class="cn-title">첫 상자는<br>7,900원</p><p>프로필 링크에서 체험 신청하고 의견을 남겨 주세요.</p></div>
+            </div>
+            <div class="cn-dots" id="cnDots" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span></div>
+            <figcaption>카드뉴스 · 1:1 · 4장</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6-1. 사용자 리뷰 ===== -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">사용자 리뷰</p>
+          <h2>먼저 열어 본 사람들의 이야기</h2>
+        </header>
+
+        <div class="rv-layout">
+          <aside class="rv-summary reveal" aria-label="리뷰 요약">
+            <p class="rv-score"><b>4.8</b><span>/ 5</span></p>
+            <span class="stars stars-lg" style="--rate:96%" aria-hidden="true"></span>
+            <p class="rv-total">리뷰 <b>5,000+</b> <span class="muted">(5,127개)</span></p>
+            <ul class="rv-bars">
+              <li><span>5점</span><i style="--w:86%"></i><em>86%</em></li>
+              <li><span>4점</span><i style="--w:10%"></i><em>10%</em></li>
+              <li><span>3점</span><i style="--w:3%"></i><em>3%</em></li>
+              <li><span>2점</span><i style="--w:1%"></i><em>1%</em></li>
+              <li><span>1점</span><i style="--w:0%"></i><em>0%</em></li>
+            </ul>
+            <ul class="rv-keys">
+              <li><b>94%</b>설명이 쉬워요</li>
+              <li><b>89%</b>선물로 좋아요</li>
+              <li><b>86%</b>30분이면 완성</li>
+            </ul>
+          </aside>
+
+          <div class="rv-main">
+            <div class="rv-tools reveal">
+              <div class="rv-filters" role="group" aria-label="리뷰 거르기">
+                <button type="button" class="tab is-active" data-rv="all" aria-pressed="true">전체</button>
+                <button type="button" class="tab" data-rv="photo" aria-pressed="false">포토 리뷰</button>
+                <button type="button" class="tab" data-rv="gift" aria-pressed="false">선물</button>
+                <button type="button" class="tab" data-rv="sub" aria-pressed="false">구독</button>
+              </div>
+              <label class="rv-sort"><span class="sr-only">정렬</span>
+                <select id="rvSort">
+                  <option value="best">추천순</option>
+                  <option value="new">최신순</option>
+                  <option value="high">별점 높은순</option>
+                  <option value="low">별점 낮은순</option>
+                </select>
+              </label>
+            </div>
+            <ul class="rv-list" id="rvList" aria-live="polite"></ul>
+            <div class="rv-more">
+              <button type="button" class="btn btn-ghost" id="rvMore">리뷰 더 보기</button>
+              <p class="note">콘셉트 페이지용 예시 리뷰예요.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. 구매 ===== -->
+    <section class="section" id="buy">
+      <div class="container buy-grid">
+        <div class="buy-visual reveal">
+          <img src="assets/images/kit-real.svg" alt="오늘의 취향 콜라주 키트 구성품" loading="lazy" width="1000" height="760">
+        </div>
+
+        <form class="buy-box reveal" id="buyForm" novalidate>
+          <p class="eyebrow">한 번 열어 보거나, 매달 받아 보거나</p>
+          <h2>오늘의 취향 콜라주</h2>
+          <p class="muted">호기심에 하나 열어 보는 샘플러로 시작해, 마음에 들면 매달 정체를 모르는 상자를 받는 취향 탐험대가 되어 보세요.</p>
+
+          <fieldset class="plans">
+            <legend class="sr-only">상품 선택</legend>
+            <label class="plan">
+              <input type="radio" name="plan" value="sampler" data-price="7900" data-name="취향 샘플러 (단품)" data-unit="" checked>
+              <span class="plan-body">
+                <span class="plan-kind">단품</span>
+                <b>취향 샘플러</b>
+                <span class="plan-desc">오늘의 취향 콜라주 상자 1개 · 아카이브 시작 · 스탬프 1개</span>
+                <span class="plan-price">7,900<small>원</small></span>
+              </span>
+            </label>
+            <label class="plan">
+              <input type="radio" name="plan" value="explorer" data-price="19900" data-name="취향 탐험대 (월 구독)" data-unit=" / 월">
+              <span class="plan-body">
+                <span class="plan-kind">매달 구독 <em class="badge">가장 많이 고르는</em></span>
+                <b>취향 탐험대</b>
+                <span class="plan-desc">매달 정체를 모르는 경험 상자 · 1일 색·키워드 힌트 · 건너뛰기 가능</span>
+                <span class="plan-price">19,900<small>원 / 월</small></span>
+              </span>
+            </label>
+            <label class="plan">
+              <input type="radio" name="plan" value="plus" data-price="39000" data-name="탐험대 플러스 (월 구독)" data-unit=" / 월">
+              <span class="plan-body">
+                <span class="plan-kind">구독 · 프리미엄</span>
+                <b>탐험대 플러스</b>
+                <span class="plan-desc">탐험대의 모든 상자 + 분기마다 블라인드 전시·뮤지컬 티켓 · 연말 실물 취향 도감</span>
+                <span class="plan-price">39,000<small>원 / 월</small></span>
+              </span>
+            </label>
+          </fieldset>
+
+          <div class="buy-row">
+            <div class="qty" id="qtyWrap">
+              <span class="qty-label" id="qtyLabel">수량</span>
+              <div class="qty-ctrl" role="group" aria-labelledby="qtyLabel">
+                <button type="button" id="qtyMinus" aria-label="수량 줄이기">−</button>
+                <output id="qty" aria-live="polite">1</output>
+                <button type="button" id="qtyPlus" aria-label="수량 늘리기">+</button>
+              </div>
+            </div>
+            <label class="gift">
+              <input type="checkbox" id="giftWrap">
+              <span>선물 포장 + 손글씨 카드 <b>+1,000원</b></span>
+            </label>
+          </div>
+
+          <div class="total">
+            <span>총 상품 금액</span>
+            <strong id="totalPrice">7,900원</strong>
+          </div>
+          <p class="ship muted">30,000원 이상 무료배송 · 평일 오후 2시 이전 주문 시 당일 출고</p>
+
+          <div class="btn-row buy-actions">
+            <button type="button" class="btn btn-ghost" id="cartBtn">장바구니</button>
+            <button type="submit" class="btn btn-primary btn-lg" id="buyBtn">바로 구매하기</button>
+          </div>
+
+          <details class="info">
+            <summary>상품 정보 제공 고시</summary>
+            <table>
+              <tr><th scope="row">상품명</th><td>취향 샘플러 · 오늘의 취향 콜라주</td></tr>
+              <tr><th scope="row">구성</th><td>상자 1, QR 카드 1, 질문 카드 3, 재료 봉투 1(재단 색종이·패턴지 24장), 스티커 시트 1(18개), 딱풀 8g, 기록 카드 1, 스탬프 스티커 1, 마스킹테이프 1m, 단추 3개</td></tr>
+              <tr><th scope="row">상자 크기</th><td>가로 15 × 세로 15 × 높이 5cm</td></tr>
+              <tr><th scope="row">완성품 크기</th><td>엽서 크기 · 10 × 15cm</td></tr>
+              <tr><th scope="row">소요 시간</th><td>만들기 약 30분 + 기록 약 5분</td></tr>
+              <tr><th scope="row">권장 연령</th><td>14세 이상</td></tr>
+              <tr><th scope="row">기록 페이지</th><td>QR로 접속하는 웹페이지 · 앱 설치와 회원가입 없음</td></tr>
+              <tr><th scope="row">주의 사항</th><td>작은 장식은 어린이의 손이 닿지 않는 곳에 보관해 주세요. 가위는 들어 있지 않아요.</td></tr>
+            </table>
+          </details>
+          <details class="info">
+            <summary>기록을 꼭 해야 하나요?</summary>
+            <p>아니요. 만들기만 해도 충분해요. 다만 기록을 남기면 스탬프가 쌓이고, 구독할 때 다음 상자가 내 취향에 맞춰 골라져요.</p>
+          </details>
+          <p class="note">콘셉트 상세페이지로, 가격과 구성은 제안안입니다.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== 기획서 ===== -->
+    <section class="section section-tint plan-section" id="plan">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">기획서</p>
+          <h2>취향수집소는 이렇게 기획했어요</h2>
+        </header>
+        <div class="plan-grid reveal">
+          <div class="plan-cell"><span>타깃</span><p>18~29세, 새 취미를 찾지만 시작이 어려운 사람. 페르소나 지우(24세).</p></div>
+          <div class="plan-cell"><span>포지셔닝</span><p>취미용품 판매처가 아니라, 새로운 나를 발견하고 기록하는 브랜드.</p></div>
+          <div class="plan-cell"><span>차별점</span><p>취향 선택 → 직접 체험 → 기록의 연결. 기록이 다음 상자를 바꿔요.</p></div>
+          <div class="plan-cell"><span>가격</span><p>샘플러 7,900원 → 탐험대 월 19,900원 → 플러스 월 39,000원.</p></div>
+        </div>
+        <div class="btn-row center reveal">
+          <a class="btn btn-primary" href="docs/plan.html" target="_blank" rel="noopener">기획서 전체 보기</a>
+          <a class="btn btn-ghost" href="docs/plan.html?print=1" target="_blank" rel="noopener">PDF로 저장하기</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="logo-ko">취향수집소 <span class="logo-en">TASTE ARCHIVE</span></p>
+      <p>아직 몰랐던 나를 수집하는 시간.</p>
+      <p class="muted small">본 페이지는 브랜드 기획 과제용 콘셉트 상세페이지입니다. 실제 판매되지 않습니다.</p>
+    </div>
+  </footer>
+
+  <!-- 모바일 하단 고정 구매 바 -->
+  <div class="sticky-buy" id="stickyBuy">
+    <div>
+      <span class="muted small" id="stickyName">취향 샘플러 (단품)</span>
+      <strong id="stickyPrice">7,900원</strong>
+    </div>
+    <a class="btn btn-primary" href="#buy">구매하기</a>
+  </div>
+
+  <!-- 라이트박스 -->
+  <dialog class="lightbox" id="lightbox" aria-label="사진 크게 보기">
+    <button class="lb-close" id="lbClose" aria-label="닫기">×</button>
+    <img id="lbImg" src="" alt="">
+    <p id="lbCap"></p>
+  </dialog>
+
+  <!-- 주문 확인 -->
+  <dialog class="order" id="orderDialog" aria-labelledby="orderTitle">
+    <p class="hand order-hand">상자를 준비할게요!</p>
+    <h3 id="orderTitle">주문 내용을 확인해 주세요</h3>
+    <dl id="orderSummary"></dl>
+    <p class="muted small">콘셉트 페이지라 실제 결제는 진행되지 않아요.</p>
+    <div class="btn-row">
+      <button class="btn btn-ghost" id="orderCancel">다시 고를게요</button>
+      <button class="btn btn-primary" id="orderOk">주문 완료</button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/vendor/qrcode.min.js" defer></script>
+  <script src="js/intro.js"></script>
+  <script src="js/reviews.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

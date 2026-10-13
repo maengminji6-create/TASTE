@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>나의 취향 아카이브 · 취향수집소</title>
+  <meta name="description" content="상자 속 QR로 들어오는 취향 기록 페이지. 질문 카드 답, 작품 사진, 오늘의 한 문장을 남기고 스탬프를 모아요.">
+  <meta name="theme-color" content="#FFF9EF">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/archive.css">
+</head>
+<body>
+  <header class="a-header">
+    <a class="a-logo" href="index.html"><img src="assets/images/favicon.svg" alt="" width="26" height="26">취향수집소</a>
+    <span class="a-box" id="boxNo">상자 No.0712</span>
+  </header>
+
+  <main class="a-main">
+    <!-- 0. 환영 -->
+    <section class="a-hello">
+      <p class="a-eyebrow">나의 취향 아카이브</p>
+      <h1>오늘의 취향 콜라주,<br>다 만들었나요?</h1>
+      <p class="a-sub">5분이면 끝나요. 앱 설치도 회원가입도 없어요.<br>기록은 이 휴대폰에만 저장돼요.</p>
+      <div class="a-stamps" aria-label="스탬프 현황">
+        <ol id="stampRow"></ol>
+        <p><b id="stampCount">0</b> / 12 스탬프</p>
+      </div>
+    </section>
+
+    <!-- 진행 표시 -->
+    <nav class="a-progress" aria-label="기록 단계">
+      <ol>
+        <li class="is-on">답하기</li><li>사진</li><li>기록</li><li>다음 취향</li>
+      </ol>
+    </nav>
+
+    <form id="recordForm" class="a-form" novalidate>
+      <!-- STEP 1 질문 카드 -->
+      <fieldset class="a-step" data-step="1">
+        <legend><span class="a-num">1</span>질문 카드에 적은 답을 옮겨 주세요</legend>
+
+        <div class="a-q">
+          <p class="a-q-title"><b>Q1</b> 오늘 기분에 가장 가까운 색은?</p>
+          <div class="a-opts">
+            <label><input type="radio" name="color" value="butter" required><span><i style="--c:#F5D66C"></i>버터 옐로</span></label>
+            <label><input type="radio" name="color" value="lilac"><span><i style="--c:#D9C5EE"></i>라일락</span></label>
+            <label><input type="radio" name="color" value="mint"><span><i style="--c:#B9DDC7"></i>세이지 민트</span></label>
+            <label><input type="radio" name="color" value="peach"><span><i style="--c:#F6D5C5"></i>피치</span></label>
+          </div>
+        </div>
+        <div class="a-q">
+          <p class="a-q-title"><b>Q2</b> 오늘 하루를 한 단어로 고른다면?</p>
+          <div class="a-opts">
+            <label><input type="radio" name="word" value="조용한" required><span>조용한</span></label>
+            <label><input type="radio" name="word" value="말랑한"><span>말랑한</span></label>
+            <label><input type="radio" name="word" value="반짝이는"><span>반짝이는</span></label>
+            <label><input type="radio" name="word" value="밖으로"><span>밖으로</span></label>
+          </div>
+          <input class="a-input a-mini" name="wordCustom" maxlength="10" placeholder="카드에 직접 적은 단어가 있다면 (선택)">
+        </div>
+        <div class="a-q">
+          <p class="a-q-title"><b>Q3</b> 지금 가장 하고 싶은 일은?</p>
+          <div class="a-opts">
+            <label><input type="radio" name="todo" value="make" required><span>손으로 만들기</span></label>
+            <label><input type="radio" name="todo" value="see"><span>무언가 보러 가기</span></label>
+            <label><input type="radio" name="todo" value="walk"><span>낯선 곳 걷기</span></label>
+            <label><input type="radio" name="todo" value="write"><span>조용히 끄적이기</span></label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- STEP 2 사진 -->
+      <fieldset class="a-step" data-step="2">
+        <legend><span class="a-num">2</span>완성한 콜라주를 찍어 주세요</legend>
+        <label class="a-photo" id="photoDrop">
+          <input type="file" id="photoInput" accept="image/*" capture="environment">
+          <img id="photoPreview" alt="" hidden>
+          <span class="a-photo-empty" id="photoEmpty">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="12" width="36" height="28" rx="5"/><circle cx="24" cy="26" r="8"/><path d="M17 12l3-5h8l3 5"/></svg>
+            <b>사진 찍기 · 앨범에서 고르기</b>
+            <small>엽서 크기 작품을 위에서 찍으면 가장 예뻐요</small>
+          </span>
+        </label>
+        <button type="button" class="a-link" id="photoClear" hidden>사진 다시 고르기</button>
+      </fieldset>
+
+      <!-- STEP 3 기록 카드 -->
+      <fieldset class="a-step" data-step="3">
+        <legend><span class="a-num">3</span>기록 카드 내용을 남겨 주세요</legend>
+        <label class="a-field"><span>작품 제목</span>
+          <input class="a-input" name="title" maxlength="24" placeholder="예) 비 오는 오후의 노랑" required>
+        </label>
+        <label class="a-field"><span>날짜</span>
+          <input class="a-input" type="date" name="date" required>
+        </label>
+        <label class="a-field"><span>오늘의 한 문장</span>
+          <textarea class="a-input" name="sentence" rows="2" maxlength="60" placeholder="예) 오늘은 대충 해도 예쁜 날."></textarea>
+          <small class="a-count"><output id="sentenceCount">0</output> / 60</small>
+        </label>
+        <div class="a-field">
+          <span>가장 손이 많이 간 재료 <small>(여러 개 가능)</small></span>
+          <div class="a-opts">
+            <label><input type="checkbox" name="material" value="색종이"><span>색종이</span></label>
+            <label><input type="checkbox" name="material" value="패턴지"><span>패턴지</span></label>
+            <label><input type="checkbox" name="material" value="스티커"><span>스티커</span></label>
+            <label><input type="checkbox" name="material" value="마스킹테이프"><span>마스킹테이프</span></label>
+            <label><input type="checkbox" name="material" value="단추"><span>단추</span></label>
+          </div>
+        </div>
+        <div class="a-field a-row">
+          <label for="minutes"><span>만드는 데 걸린 시간</span></label>
+          <output id="minutesOut" class="a-pill">30분</output>
+          <input type="range" id="minutes" name="minutes" min="10" max="90" step="5" value="30">
+        </div>
+        <div class="a-field">
+          <span>오늘의 만족도</span>
+          <div class="a-rate" role="radiogroup" aria-label="만족도">
+            <label><input type="radio" name="mood" value="1"><span>🙂</span></label>
+            <label><input type="radio" name="mood" value="2"><span>😊</span></label>
+            <label><input type="radio" name="mood" value="3" checked><span>😄</span></label>
+            <label><input type="radio" name="mood" value="4"><span>🥰</span></label>
+            <label><input type="radio" name="mood" value="5"><span>🤩</span></label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- STEP 4 다음 취향 -->
+      <fieldset class="a-step" data-step="4">
+        <legend><span class="a-num">4</span>다음에 해 보고 싶은 경험은?</legend>
+        <p class="a-help">고른 경험이 다음 상자를 고르는 데 반영돼요. (최대 3개)</p>
+        <div class="a-opts a-next" id="nextOpts">
+          <label><input type="checkbox" name="next" value="향"><span>🕯️ 향 만들기</span></label>
+          <label><input type="checkbox" name="next" value="도자기"><span>🏺 도자기</span></label>
+          <label><input type="checkbox" name="next" value="산책"><span>🗺️ 동네 산책</span></label>
+          <label><input type="checkbox" name="next" value="전시"><span>🖼️ 전시 보기</span></label>
+          <label><input type="checkbox" name="next" value="음악"><span>🎧 음악 듣기</span></label>
+          <label><input type="checkbox" name="next" value="자수"><span>🧵 자수</span></label>
+          <label><input type="checkbox" name="next" value="사진"><span>📷 필름 사진</span></label>
+          <label><input type="checkbox" name="next" value="공연"><span>🎭 공연 보기</span></label>
+        </div>
+        <label class="a-consent"><input type="checkbox" name="share"> 이 기록을 취향수집소 피드에 익명으로 소개해도 좋아요 (선택)</label>
+      </fieldset>
+
+      <p class="a-error" id="formError" role="alert" hidden></p>
+      <button type="submit" class="a-submit">기록 남기고 스탬프 받기</button>
+    </form>
+
+    <!-- 결과 -->
+    <section class="a-result" id="result" hidden tabindex="-1">
+      <div class="a-stamp-pop" id="stampPop" aria-hidden="true"><span>No.<b id="popNo">1</b></span><small>스탬프 획득</small></div>
+      <p class="a-eyebrow">기록 완료</p>
+      <h2 id="resultHead">첫 번째 취향이 수집됐어요</h2>
+
+      <article class="a-card" id="recordCard">
+        <div class="a-card-photo" id="cardPhoto"></div>
+        <div class="a-card-body">
+          <p class="a-card-meta" id="cardMeta"></p>
+          <h3 id="cardTitle"></h3>
+          <ul class="a-card-tags" id="cardTags"></ul>
+          <p class="a-card-quote" id="cardQuote"></p>
+        </div>
+      </article>
+
+      <div class="a-actions">
+        <button type="button" class="a-btn a-btn-dark" id="saveImage">기록 카드 이미지로 저장</button>
+        <button type="button" class="a-btn" id="newRecord">새 기록 쓰기</button>
+      </div>
+
+      <div class="a-next-box">
+        <p class="a-eyebrow">기록으로 고른 다음 상자</p>
+        <h3 id="nextBox"></h3>
+        <p id="nextWhy" class="a-help"></p>
+      </div>
+    </section>
+
+    <!-- 지난 기록 -->
+    <section class="a-history">
+      <h2>나의 취향 도감</h2>
+      <p class="a-help" id="historyEmpty">아직 기록이 없어요. 첫 기록을 남기면 여기에 쌓여요.</p>
+      <ol class="a-history-list" id="historyList"></ol>
+      <button type="button" class="a-link" id="clearAll" hidden>이 휴대폰의 기록 모두 지우기</button>
+    </section>
+  </main>
+
+  <footer class="a-footer">
+    취향수집소 · TASTE ARCHIVE<br>
+    <small>콘셉트 데모 페이지예요. 기록은 서버로 전송되지 않고 이 브라우저에만 저장돼요.</small>
+  </footer>
+
+  <script src="js/archive.js" defer></script>
+</body>
+</html>

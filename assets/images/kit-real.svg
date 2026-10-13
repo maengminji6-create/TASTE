@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-label="오늘의 취향 콜라주 키트 구성품 플랫레이: 상자 뚜껑, QR 카드, 질문 카드 3장, 재료 봉투, 스티커 시트, 딱풀, 기록 카드, 스탬프 스티커, 마스킹테이프와 단추">
+<defs>
+  <filter id="sh" x="-20%" y="-20%" width="145%" height="150%">
+    <feDropShadow dx="3" dy="8" stdDeviation="7" flood-color="#5A4636" flood-opacity=".24"/>
+  </filter>
+  <filter id="shs" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="1" dy="2" stdDeviation="1.6" flood-color="#5A4636" flood-opacity=".28"/>
+  </filter>
+  <filter id="paper" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" seed="5" result="n"/>
+    <feColorMatrix in="n" type="matrix" values=".16 0 0 0 .86  .16 0 0 0 .86  .16 0 0 0 .86  0 0 0 0 1" result="g"/>
+    <feBlend in="SourceGraphic" in2="g" mode="multiply" result="b"/>
+    <feComposite in="b" in2="SourceGraphic" operator="in"/>
+  </filter>
+  <filter id="linen" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".9 .035" numOctaves="2" seed="3" result="a"/>
+    <feTurbulence type="fractalNoise" baseFrequency=".035 .9" numOctaves="2" seed="8" result="b"/>
+    <feBlend in="a" in2="b" mode="multiply" result="ab"/>
+    <feColorMatrix in="ab" type="matrix" values=".22 0 0 0 .8  .22 0 0 0 .78  .22 0 0 0 .74  0 0 0 0 1" result="g"/>
+    <feBlend in="SourceGraphic" in2="g" mode="multiply"/>
+  </filter>
+  <linearGradient id="glue" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#C7B1E2"/><stop offset=".28" stop-color="#EEE4F8"/><stop offset=".55" stop-color="#D9C5EE"/><stop offset="1" stop-color="#A993C6"/>
+  </linearGradient>
+  <linearGradient id="glueCap" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#9C86BA"/><stop offset=".3" stop-color="#D5C3EA"/><stop offset="1" stop-color="#7E6A9A"/>
+  </linearGradient>
+  <linearGradient id="gloss" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity=".18"/>
+  </linearGradient>
+  <radialGradient id="tape" cx=".5" cy=".5" r=".5">
+    <stop offset=".46" stop-color="#E9DCC8"/><stop offset=".5" stop-color="#B9DDC7"/><stop offset=".8" stop-color="#A9D2B9"/><stop offset="1" stop-color="#C9E6D4"/>
+  </radialGradient>
+  <radialGradient id="light" cx=".25" cy=".15" r=".95">
+    <stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#6B5440" stop-opacity=".14"/>
+  </radialGradient>
+  <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#F5D66C"/><circle cx="7" cy="7" r="2.4" fill="#FFF9EF"/></pattern>
+  <pattern id="stripe" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="12" height="12" fill="#B9DDC7"/><rect width="5" height="12" fill="#E3F1E8"/></pattern>
+  <pattern id="check" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#F6D5C5"/><rect width="8" height="8" fill="#EDBFAB"/><rect x="8" y="8" width="8" height="8" fill="#EDBFAB"/></pattern>
+  <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#FFFDF8"/><path d="M10 0V10H0" fill="none" stroke="#E6DDF2" stroke-width="1"/></pattern>
+</defs>
+
+<!-- table: warm linen -->
+<rect width="1000" height="760" fill="#F3EADB" filter="url(#linen)"/>
+
+<!-- 1 상자 뚜껑 -->
+<g transform="rotate(-3 210 200)" filter="url(#sh)">
+  <rect x="52" y="46" width="320" height="320" rx="6" fill="#E3D6C2"/>
+  <g filter="url(#paper)">
+    <rect x="48" y="38" width="320" height="320" rx="6" fill="#FBF5EA"/>
+    <rect x="48" y="262" width="320" height="46" fill="#F5D66C"/>
+  </g>
+  <rect x="48" y="38" width="320" height="320" rx="6" fill="url(#gloss)" opacity=".5"/>
+  <g transform="translate(184 74)" fill="none" stroke="#403B38" stroke-width="2.2" stroke-linejoin="round">
+    <path d="M4 14 24 6l20 8-20 8z" fill="#FBE9DD"/><path d="M4 14l20 8v22L5 36z" fill="#D9C5EE"/><path d="M24 22l20-8-1 22-19 8z" fill="#B9DDC7"/>
+  </g>
+  <text x="208" y="158" text-anchor="middle" font-family="'Batang','AppleMyungjo',Georgia,serif" font-size="34" font-weight="700" fill="#403B38">취향수집소</text>
+  <text x="208" y="184" text-anchor="middle" font-family="'Batang','AppleMyungjo',Georgia,serif" font-size="12" letter-spacing="6" fill="#746C67">TASTE ARCHIVE</text>
+  <g fill="none" stroke="#B9AD9C" stroke-width="1.6" stroke-dasharray="3 3"><circle cx="142" cy="212" r="10"/><circle cx="186" cy="212" r="10"/><circle cx="230" cy="212" r="10"/><circle cx="274" cy="212" r="10"/><circle cx="318" cy="212" r="10"/><circle cx="98" cy="242" r="10"/><circle cx="142" cy="242" r="10"/><circle cx="186" cy="242" r="10"/><circle cx="230" cy="242" r="10"/><circle cx="274" cy="242" r="10"/><circle cx="318" cy="242" r="10"/></g>
+  <circle cx="98" cy="212" r="10" fill="#F5D66C" stroke="#403B38" stroke-width="1.4"/>
+  <text x="208" y="291" text-anchor="middle" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="13.5" fill="#403B38" letter-spacing="1">No.0712 · 오늘의 취향 콜라주</text>
+  <text x="208" y="338" text-anchor="middle" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="11" fill="#9A8F84">15 × 15 × 5 cm</text>
+</g>
+
+<!-- 2 QR 카드 -->
+<g transform="rotate(4 490 180)" filter="url(#sh)">
+  <g filter="url(#paper)"><rect x="402" y="52" width="176" height="248" rx="10" fill="#FFFDF8"/></g>
+  <path d="M402 72 v-10 a10 10 0 0 1 10 -10 h156 a10 10 0 0 1 10 10 v10 z" fill="#D9C5EE"/>
+  <text x="490" y="96" text-anchor="middle" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="12.5" font-weight="700" fill="#403B38">나의 취향 아카이브</text>
+  <g transform="translate(433 111)" fill="#403B38"><rect x="0.0" y="0.0" width="4.75" height="4.75"/><rect x="4.6" y="0.0" width="4.75" height="4.75"/><rect x="9.2" y="0.0" width="4.75" height="4.75"/><rect x="13.8" y="0.0" width="4.75" height="4.75"/><rect x="18.4" y="0.0" width="4.75" height="4.75"/><rect x="23.0" y="0.0" width="4.75" height="4.75"/><rect x="27.6" y="0.0" width="4.75" height="4.75"/><rect x="36.8" y="0.0" width="4.75" height="4.75"/><rect x="46.0" y="0.0" width="4.75" height="4.75"/><rect x="50.6" y="0.0" width="4.75" height="4.75"/><rect x="59.8" y="0.0" width="4.75" height="4.75"/><rect x="69.0" y="0.0" width="4.75" height="4.75"/><rect x="82.8" y="0.0" width="4.75" height="4.75"/><rect x="87.4" y="0.0" width="4.75" height="4.75"/><rect x="92.0" y="0.0" width="4.75" height="4.75"/><rect x="96.6" y="0.0" width="4.75" height="4.75"/><rect x="101.2" y="0.0" width="4.75" height="4.75"/><rect x="105.8" y="0.0" width="4.75" height="4.75"/><rect x="110.4" y="0.0" width="4.75" height="4.75"/><rect x="0.0" y="4.6" width="4.75" height="4.75"/><rect x="27.6" y="4.6" width="4.75" height="4.75"/><rect x="36.8" y="4.6" width="4.75" height="4.75"/><rect x="55.2" y="4.6" width="4.75" height="4.75"/><rect x="59.8" y="4.6" width="4.75" height="4.75"/><rect x="64.4" y="4.6" width="4.75" height="4.75"/><rect x="82.8" y="4.6" width="4.75" height="4.75"/><rect x="110.4" y="4.6" width="4.75" height="4.75"/><rect x="0.0" y="9.2" width="4.75" height="4.75"/><rect x="9.2" y="9.2" width="4.75" height="4.75"/><rect x="13.8" y="9.2" width="4.75" height="4.75"/><rect x="18.4" y="9.2" width="4.75" height="4.75"/><rect x="27.6" y="9.2" width="4.75" height="4.75"/><rect x="41.4" y="9.2" width="4.75" height="4.75"/><rect x="46.0" y="9.2" width="4.75" height="4.75"/><rect x="55.2" y="9.2" width="4.75" height="4.75"/><rect x="64.4" y="9.2" width="4.75" height="4.75"/><rect x="73.6" y="9.2" width="4.75" height="4.75"/><rect x="82.8" y="9.2" width="4.75" height="4.75"/><rect x="92.0" y="9.2" width="4.75" height="4.75"/><rect x="96.6" y="9.2" width="4.75" height="4.75"/><rect x="101.2" y="9.2" width="4.75" height="4.75"/><rect x="110.4" y="9.2" width="4.75" height="4.75"/><rect x="0.0" y="13.8" width="4.75" height="4.75"/><rect x="9.2" y="13.8" width="4.75" height="4.75"/><rect x="13.8" y="13.8" width="4.75" height="4.75"/><rect x="18.4" y="13.8" width="4.75" height="4.75"/><rect x="27.6" y="13.8" width="4.75" height="4.75"/><rect x="36.8" y="13.8" width="4.75" height="4.75"/><rect x="41.4" y="13.8" width="4.75" height="4.75"/><rect x="46.0" y="13.8" width="4.75" height="4.75"/><rect x="50.6" y="13.8" width="4.75" height="4.75"/><rect x="55.2" y="13.8" width="4.75" height="4.75"/><rect x="69.0" y="13.8" width="4.75" height="4.75"/><rect x="73.6" y="13.8" width="4.75" height="4.75"/><rect x="82.8" y="13.8" width="4.75" height="4.75"/><rect x="92.0" y="13.8" width="4.75" height="4.75"/><rect x="96.6" y="13.8" width="4.75" height="4.75"/><rect x="101.2" y="13.8" width="4.75" height="4.75"/><rect x="110.4" y="13.8" width="4.75" height="4.75"/><rect x="0.0" y="18.4" width="4.75" height="4.75"/><rect x="9.2" y="18.4" width="4.75" height="4.75"/><rect x="13.8" y="18.4" width="4.75" height="4.75"/><rect x="18.4" y="18.4" width="4.75" height="4.75"/><rect x="27.6" y="18.4" width="4.75" height="4.75"/><rect x="36.8" y="18.4" width="4.75" height="4.75"/><rect x="50.6" y="18.4" width="4.75" height="4.75"/><rect x="69.0" y="18.4" width="4.75" height="4.75"/><rect x="73.6" y="18.4" width="4.75" height="4.75"/><rect x="82.8" y="18.4" width="4.75" height="4.75"/><rect x="92.0" y="18.4" width="4.75" height="4.75"/><rect x="96.6" y="18.4" width="4.75" height="4.75"/><rect x="101.2" y="18.4" width="4.75" height="4.75"/><rect x="110.4" y="18.4" width="4.75" height="4.75"/><rect x="0.0" y="23.0" width="4.75" height="4.75"/><rect x="27.6" y="23.0" width="4.75" height="4.75"/><rect x="50.6" y="23.0" width="4.75" height="4.75"/><rect x="55.2" y="23.0" width="4.75" height="4.75"/><rect x="82.8" y="23.0" width="4.75" height="4.75"/><rect x="110.4" y="23.0" width="4.75" height="4.75"/><rect x="0.0" y="27.6" width="4.75" height="4.75"/><rect x="4.6" y="27.6" width="4.75" height="4.75"/><rect x="9.2" y="27.6" width="4.75" height="4.75"/><rect x="13.8" y="27.6" width="4.75" height="4.75"/><rect x="18.4" y="27.6" width="4.75" height="4.75"/><rect x="23.0" y="27.6" width="4.75" height="4.75"/><rect x="27.6" y="27.6" width="4.75" height="4.75"/><rect x="36.8" y="27.6" width="4.75" height="4.75"/><rect x="46.0" y="27.6" width="4.75" height="4.75"/><rect x="55.2" y="27.6" width="4.75" height="4.75"/><rect x="64.4" y="27.6" width="4.75" height="4.75"/><rect x="73.6" y="27.6" width="4.75" height="4.75"/><rect x="82.8" y="27.6" width="4.75" height="4.75"/><rect x="87.4" y="27.6" width="4.75" height="4.75"/><rect x="92.0" y="27.6" width="4.75" height="4.75"/><rect x="96.6" y="27.6" width="4.75" height="4.75"/><rect x="101.2" y="27.6" width="4.75" height="4.75"/><rect x="105.8" y="27.6" width="4.75" height="4.75"/><rect x="110.4" y="27.6" width="4.75" height="4.75"/><rect x="36.8" y="32.2" width="4.75" height="4.75"/><rect x="46.0" y="32.2" width="4.75" height="4.75"/><rect x="50.6" y="32.2" width="4.75" height="4.75"/><rect x="55.2" y="32.2" width="4.75" height="4.75"/><rect x="64.4" y="32.2" width="4.75" height="4.75"/><rect x="69.0" y="32.2" width="4.75" height="4.75"/><rect x="4.6" y="36.8" width="4.75" height="4.75"/><rect x="9.2" y="36.8" width="4.75" height="4.75"/><rect x="13.8" y="36.8" width="4.75" height="4.75"/><rect x="18.4" y="36.8" width="4.75" height="4.75"/><rect x="27.6" y="36.8" width="4.75" height="4.75"/><rect x="32.2" y="36.8" width="4.75" height="4.75"/><rect x="36.8" y="36.8" width="4.75" height="4.75"/><rect x="46.0" y="36.8" width="4.75" height="4.75"/><rect x="55.2" y="36.8" width="4.75" height="4.75"/><rect x="64.4" y="36.8" width="4.75" height="4.75"/><rect x="69.0" y="36.8" width="4.75" height="4.75"/><rect x="73.6" y="36.8" width="4.75" height="4.75"/><rect x="78.2" y="36.8" width="4.75" height="4.75"/><rect x="82.8" y="36.8" width="4.75" height="4.75"/><rect x="87.4" y="36.8" width="4.75" height="4.75"/><rect x="92.0" y="36.8" width="4.75" height="4.75"/><rect x="96.6" y="36.8" width="4.75" height="4.75"/><rect x="101.2" y="36.8" width="4.75" height="4.75"/><rect x="110.4" y="36.8" width="4.75" height="4.75"/><rect x="0.0" y="41.4" width="4.75" height="4.75"/><rect x="4.6" y="41.4" width="4.75" height="4.75"/><rect x="23.0" y="41.4" width="4.75" height="4.75"/><rect x="32.2" y="41.4" width="4.75" height="4.75"/><rect x="50.6" y="41.4" width="4.75" height="4.75"/><rect x="64.4" y="41.4" width="4.75" height="4.75"/><rect x="69.0" y="41.4" width="4.75" height="4.75"/><rect x="73.6" y="41.4" width="4.75" height="4.75"/><rect x="82.8" y="41.4" width="4.75" height="4.75"/><rect x="105.8" y="41.4" width="4.75" height="4.75"/><rect x="0.0" y="46.0" width="4.75" height="4.75"/><rect x="4.6" y="46.0" width="4.75" height="4.75"/><rect x="9.2" y="46.0" width="4.75" height="4.75"/><rect x="18.4" y="46.0" width="4.75" height="4.75"/><rect x="27.6" y="46.0" width="4.75" height="4.75"/><rect x="41.4" y="46.0" width="4.75" height="4.75"/><rect x="50.6" y="46.0" width="4.75" height="4.75"/><rect x="59.8" y="46.0" width="4.75" height="4.75"/><rect x="64.4" y="46.0" width="4.75" height="4.75"/><rect x="69.0" y="46.0" width="4.75" height="4.75"/><rect x="73.6" y="46.0" width="4.75" height="4.75"/><rect x="78.2" y="46.0" width="4.75" height="4.75"/><rect x="82.8" y="46.0" width="4.75" height="4.75"/><rect x="87.4" y="46.0" width="4.75" height="4.75"/><rect x="92.0" y="46.0" width="4.75" height="4.75"/><rect x="96.6" y="46.0" width="4.75" height="4.75"/><rect x="101.2" y="46.0" width="4.75" height="4.75"/><rect x="105.8" y="46.0" width="4.75" height="4.75"/><rect x="4.6" y="50.6" width="4.75" height="4.75"/><rect x="13.8" y="50.6" width="4.75" height="4.75"/><rect x="32.2" y="50.6" width="4.75" height="4.75"/><rect x="36.8" y="50.6" width="4.75" height="4.75"/><rect x="55.2" y="50.6" width="4.75" height="4.75"/><rect x="64.4" y="50.6" width="4.75" height="4.75"/><rect x="69.0" y="50.6" width="4.75" height="4.75"/><rect x="73.6" y="50.6" width="4.75" height="4.75"/><rect x="78.2" y="50.6" width="4.75" height="4.75"/><rect x="110.4" y="50.6" width="4.75" height="4.75"/><rect x="0.0" y="55.2" width="4.75" height="4.75"/><rect x="9.2" y="55.2" width="4.75" height="4.75"/><rect x="27.6" y="55.2" width="4.75" height="4.75"/><rect x="32.2" y="55.2" width="4.75" height="4.75"/><rect x="36.8" y="55.2" width="4.75" height="4.75"/><rect x="59.8" y="55.2" width="4.75" height="4.75"/><rect x="82.8" y="55.2" width="4.75" height="4.75"/><rect x="87.4" y="55.2" width="4.75" height="4.75"/><rect x="92.0" y="55.2" width="4.75" height="4.75"/><rect x="101.2" y="55.2" width="4.75" height="4.75"/><rect x="105.8" y="55.2" width="4.75" height="4.75"/><rect x="18.4" y="59.8" width="4.75" height="4.75"/><rect x="23.0" y="59.8" width="4.75" height="4.75"/><rect x="50.6" y="59.8" width="4.75" height="4.75"/><rect x="64.4" y="59.8" width="4.75" height="4.75"/><rect x="69.0" y="59.8" width="4.75" height="4.75"/><rect x="78.2" y="59.8" width="4.75" height="4.75"/><rect x="82.8" y="59.8" width="4.75" height="4.75"/><rect x="101.2" y="59.8" width="4.75" height="4.75"/><rect x="105.8" y="59.8" width="4.75" height="4.75"/><rect x="0.0" y="64.4" width="4.75" height="4.75"/><rect x="9.2" y="64.4" width="4.75" height="4.75"/><rect x="13.8" y="64.4" width="4.75" height="4.75"/><rect x="18.4" y="64.4" width="4.75" height="4.75"/><rect x="23.0" y="64.4" width="4.75" height="4.75"/><rect x="27.6" y="64.4" width="4.75" height="4.75"/><rect x="41.4" y="64.4" width="4.75" height="4.75"/><rect x="46.0" y="64.4" width="4.75" height="4.75"/><rect x="50.6" y="64.4" width="4.75" height="4.75"/><rect x="55.2" y="64.4" width="4.75" height="4.75"/><rect x="59.8" y="64.4" width="4.75" height="4.75"/><rect x="64.4" y="64.4" width="4.75" height="4.75"/><rect x="69.0" y="64.4" width="4.75" height="4.75"/><rect x="101.2" y="64.4" width="4.75" height="4.75"/><rect x="0.0" y="69.0" width="4.75" height="4.75"/><rect x="4.6" y="69.0" width="4.75" height="4.75"/><rect x="18.4" y="69.0" width="4.75" height="4.75"/><rect x="36.8" y="69.0" width="4.75" height="4.75"/><rect x="41.4" y="69.0" width="4.75" height="4.75"/><rect x="55.2" y="69.0" width="4.75" height="4.75"/><rect x="64.4" y="69.0" width="4.75" height="4.75"/><rect x="69.0" y="69.0" width="4.75" height="4.75"/><rect x="73.6" y="69.0" width="4.75" height="4.75"/><rect x="78.2" y="69.0" width="4.75" height="4.75"/><rect x="82.8" y="69.0" width="4.75" height="4.75"/><rect x="87.4" y="69.0" width="4.75" height="4.75"/><rect x="92.0" y="69.0" width="4.75" height="4.75"/><rect x="101.2" y="69.0" width="4.75" height="4.75"/><rect x="105.8" y="69.0" width="4.75" height="4.75"/><rect x="0.0" y="73.6" width="4.75" height="4.75"/><rect x="13.8" y="73.6" width="4.75" height="4.75"/><rect x="18.4" y="73.6" width="4.75" height="4.75"/><rect x="23.0" y="73.6" width="4.75" height="4.75"/><rect x="27.6" y="73.6" width="4.75" height="4.75"/><rect x="32.2" y="73.6" width="4.75" height="4.75"/><rect x="41.4" y="73.6" width="4.75" height="4.75"/><rect x="55.2" y="73.6" width="4.75" height="4.75"/><rect x="64.4" y="73.6" width="4.75" height="4.75"/><rect x="69.0" y="73.6" width="4.75" height="4.75"/><rect x="73.6" y="73.6" width="4.75" height="4.75"/><rect x="78.2" y="73.6" width="4.75" height="4.75"/><rect x="82.8" y="73.6" width="4.75" height="4.75"/><rect x="87.4" y="73.6" width="4.75" height="4.75"/><rect x="92.0" y="73.6" width="4.75" height="4.75"/><rect x="96.6" y="73.6" width="4.75" height="4.75"/><rect x="101.2" y="73.6" width="4.75" height="4.75"/><rect x="110.4" y="73.6" width="4.75" height="4.75"/><rect x="36.8" y="78.2" width="4.75" height="4.75"/><rect x="46.0" y="78.2" width="4.75" height="4.75"/><rect x="59.8" y="78.2" width="4.75" height="4.75"/><rect x="64.4" y="78.2" width="4.75" height="4.75"/><rect x="73.6" y="78.2" width="4.75" height="4.75"/><rect x="92.0" y="78.2" width="4.75" height="4.75"/><rect x="96.6" y="78.2" width="4.75" height="4.75"/><rect x="110.4" y="78.2" width="4.75" height="4.75"/><rect x="0.0" y="82.8" width="4.75" height="4.75"/><rect x="4.6" y="82.8" width="4.75" height="4.75"/><rect x="9.2" y="82.8" width="4.75" height="4.75"/><rect x="13.8" y="82.8" width="4.75" height="4.75"/><rect x="18.4" y="82.8" width="4.75" height="4.75"/><rect x="23.0" y="82.8" width="4.75" height="4.75"/><rect x="27.6" y="82.8" width="4.75" height="4.75"/><rect x="41.4" y="82.8" width="4.75" height="4.75"/><rect x="46.0" y="82.8" width="4.75" height="4.75"/><rect x="55.2" y="82.8" width="4.75" height="4.75"/><rect x="59.8" y="82.8" width="4.75" height="4.75"/><rect x="64.4" y="82.8" width="4.75" height="4.75"/><rect x="73.6" y="82.8" width="4.75" height="4.75"/><rect x="82.8" y="82.8" width="4.75" height="4.75"/><rect x="92.0" y="82.8" width="4.75" height="4.75"/><rect x="96.6" y="82.8" width="4.75" height="4.75"/><rect x="105.8" y="82.8" width="4.75" height="4.75"/><rect x="0.0" y="87.4" width="4.75" height="4.75"/><rect x="27.6" y="87.4" width="4.75" height="4.75"/><rect x="50.6" y="87.4" width="4.75" height="4.75"/><rect x="55.2" y="87.4" width="4.75" height="4.75"/><rect x="59.8" y="87.4" width="4.75" height="4.75"/><rect x="69.0" y="87.4" width="4.75" height="4.75"/><rect x="73.6" y="87.4" width="4.75" height="4.75"/><rect x="92.0" y="87.4" width="4.75" height="4.75"/><rect x="0.0" y="92.0" width="4.75" height="4.75"/><rect x="9.2" y="92.0" width="4.75" height="4.75"/><rect x="13.8" y="92.0" width="4.75" height="4.75"/><rect x="18.4" y="92.0" width="4.75" height="4.75"/><rect x="27.6" y="92.0" width="4.75" height="4.75"/><rect x="36.8" y="92.0" width="4.75" height="4.75"/><rect x="41.4" y="92.0" width="4.75" height="4.75"/><rect x="59.8" y="92.0" width="4.75" height="4.75"/><rect x="73.6" y="92.0" width="4.75" height="4.75"/><rect x="78.2" y="92.0" width="4.75" height="4.75"/><rect x="82.8" y="92.0" width="4.75" height="4.75"/><rect x="87.4" y="92.0" width="4.75" height="4.75"/><rect x="92.0" y="92.0" width="4.75" height="4.75"/><rect x="101.2" y="92.0" width="4.75" height="4.75"/><rect x="105.8" y="92.0" width="4.75" height="4.75"/><rect x="110.4" y="92.0" width="4.75" height="4.75"/><rect x="0.0" y="96.6" width="4.75" height="4.75"/><rect x="9.2" y="96.6" width="4.75" height="4.75"/><rect x="13.8" y="96.6" width="4.75" height="4.75"/><rect x="18.4" y="96.6" width="4.75" height="4.75"/><rect x="27.6" y="96.6" width="4.75" height="4.75"/><rect x="36.8" y="96.6" width="4.75" height="4.75"/><rect x="41.4" y="96.6" width="4.75" height="4.75"/><rect x="46.0" y="96.6" width="4.75" height="4.75"/><rect x="50.6" y="96.6" width="4.75" height="4.75"/><rect x="55.2" y="96.6" width="4.75" height="4.75"/><rect x="69.0" y="96.6" width="4.75" height="4.75"/><rect x="78.2" y="96.6" width="4.75" height="4.75"/><rect x="92.0" y="96.6" width="4.75" height="4.75"/><rect x="96.6" y="96.6" width="4.75" height="4.75"/><rect x="105.8" y="96.6" width="4.75" height="4.75"/><rect x="0.0" y="101.2" width="4.75" height="4.75"/><rect x="9.2" y="101.2" width="4.75" height="4.75"/><rect x="13.8" y="101.2" width="4.75" height="4.75"/><rect x="18.4" y="101.2" width="4.75" height="4.75"/><rect x="27.6" y="101.2" width="4.75" height="4.75"/><rect x="36.8" y="101.2" width="4.75" height="4.75"/><rect x="50.6" y="101.2" width="4.75" height="4.75"/><rect x="55.2" y="101.2" width="4.75" height="4.75"/><rect x="64.4" y="101.2" width="4.75" height="4.75"/><rect x="69.0" y="101.2" width="4.75" height="4.75"/><rect x="73.6" y="101.2" width="4.75" height="4.75"/><rect x="87.4" y="101.2" width="4.75" height="4.75"/><rect x="92.0" y="101.2" width="4.75" height="4.75"/><rect x="96.6" y="101.2" width="4.75" height="4.75"/><rect x="0.0" y="105.8" width="4.75" height="4.75"/><rect x="27.6" y="105.8" width="4.75" height="4.75"/><rect x="36.8" y="105.8" width="4.75" height="4.75"/><rect x="41.4" y="105.8" width="4.75" height="4.75"/><rect x="50.6" y="105.8" width="4.75" height="4.75"/><rect x="55.2" y="105.8" width="4.75" height="4.75"/><rect x="69.0" y="105.8" width="4.75" height="4.75"/><rect x="92.0" y="105.8" width="4.75" height="4.75"/><rect x="101.2" y="105.8" width="4.75" height="4.75"/><rect x="0.0" y="110.4" width="4.75" height="4.75"/><rect x="4.6" y="110.4" width="4.75" height="4.75"/><rect x="9.2" y="110.4" width="4.75" height="4.75"/><rect x="13.8" y="110.4" width="4.75" height="4.75"/><rect x="18.4" y="110.4" width="4.75" height="4.75"/><rect x="23.0" y="110.4" width="4.75" height="4.75"/><rect x="27.6" y="110.4" width="4.75" height="4.75"/><rect x="55.2" y="110.4" width="4.75" height="4.75"/><rect x="64.4" y="110.4" width="4.75" height="4.75"/><rect x="69.0" y="110.4" width="4.75" height="4.75"/><rect x="78.2" y="110.4" width="4.75" height="4.75"/><rect x="87.4" y="110.4" width="4.75" height="4.75"/><rect x="105.8" y="110.4" width="4.75" height="4.75"/></g>
+  <text x="490" y="254" text-anchor="middle" font-family="'Batang','AppleMyungjo',Georgia,serif" font-size="15" fill="#403B38">No.0712</text>
+  <text x="490" y="276" text-anchor="middle" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="10.5" fill="#8A8076">카메라로 비춰 주세요 · 앱 설치 없음</text>
+</g>
+
+<!-- 3 질문 카드 3장 -->
+<g filter="url(#sh)">
+  <g transform="rotate(12 800 300)" filter="url(#paper)"><rect x="728" y="70" width="148" height="212" rx="12" fill="#D9C5EE"/></g>
+  <text transform="rotate(12 800 300)" x="840" y="104" font-family="'Batang','AppleMyungjo',Georgia,serif" font-size="22" fill="#403B38" opacity=".75">Q3</text>
+  <g transform="rotate(3 800 300)" filter="url(#paper)"><rect x="722" y="62" width="148" height="212" rx="12" fill="#F6D5C5"/></g>
+  <text transform="rotate(3 800 300)" x="834" y="96" font-family="'Batang','AppleMyungjo',Georgia,serif" font-size="22" fill="#403B38" opacity=".75">Q2</text>
+  <g transform="rotate(-8 800 300)">
+    <g filter="url(#paper)"><rect x="700" y="58" width="148" height="212" rx="12" fill="#F5D66C"/></g>
+    <rect x="700" y="58" width="148" height="212" rx="12" fill="url(#gloss)" opacity=".6"/>
+    <text x="718" y="100" font-family="'Batang','AppleMyungjo',Georgia,serif" font-size="30" font-weight="700" fill="#403B38">Q1</text>
+    <text x="718" y="140" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="14" font-weight="700" fill="#403B38">오늘 기분에</text>
+    <text x="718" y="160" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="14" font-weight="700" fill="#403B38">가장 가까운</text>
+    <text x="718" y="180" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="14" font-weight="700" fill="#403B38">색은?</text>
+    <g stroke="#403B38" stroke-width="1.2">
+      <circle cx="728" cy="224" r="9" fill="#FFF9EF"/><circle cx="752" cy="224" r="9" fill="#D9C5EE"/><circle cx="776" cy="224" r="9" fill="#B9DDC7"/><circle cx="800" cy="224" r="9" fill="#F6D5C5"/>
+    </g>
+    <text x="718" y="256" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="9.5" fill="#6C6157">취향 질문 카드 1 / 3</text>
+  </g>
+</g>
+
+<!-- 4 재료 봉투 (반투명 글라신) -->
+<g transform="rotate(-4 190 575)">
+  <g filter="url(#shs)">
+    <rect x="70" y="440" width="110" height="140" fill="url(#dots)" transform="rotate(-8 125 510)"/>
+    <rect x="150" y="430" width="120" height="150" fill="url(#stripe)" transform="rotate(6 210 505)"/>
+    <rect x="200" y="520" width="110" height="130" fill="url(#check)" transform="rotate(-5 255 585)"/>
+    <rect x="80" y="560" width="120" height="120" fill="#D9C5EE" transform="rotate(10 140 620)"/>
+    <circle cx="240" cy="470" r="34" fill="#F6D5C5"/>
+    <polygon points="110,690 170,640 190,700" fill="#B9DDC7"/>
+    <rect x="230" y="640" width="70" height="56" fill="#F5D66C" transform="rotate(14 265 668)"/>
+    <rect x="100" y="470" width="70" height="40" fill="url(#grid)" transform="rotate(-20 135 490)"/>
+  </g>
+  <g filter="url(#sh)"><rect x="50" y="410" width="290" height="320" rx="6" fill="#FFFFFF" opacity=".55"/></g>
+  <rect x="50" y="410" width="290" height="320" rx="6" fill="none" stroke="#FFFFFF" stroke-width="2" opacity=".9"/>
+  <rect x="50" y="410" width="290" height="26" fill="#FFFFFF" opacity=".6"/>
+  <line x1="56" y1="436" x2="334" y2="436" stroke="#E2D9CC" stroke-width="2"/>
+  <g stroke="#fff" stroke-width="2" fill="none" opacity=".75">
+    <path d="M80 470 q40 60 10 140"/><path d="M300 460 q-30 80 10 200"/><path d="M150 700 q60 -20 140 4"/>
+  </g>
+  <g transform="rotate(-6 200 560)" filter="url(#shs)">
+    <rect x="124" y="528" width="158" height="62" rx="4" fill="#FBF5EA"/>
+    <rect x="124" y="528" width="158" height="62" rx="4" fill="none" stroke="#403B38" stroke-width="1.2"/>
+    <text x="203" y="556" text-anchor="middle" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="15" font-weight="700" fill="#403B38">재료 봉투</text>
+    <text x="203" y="576" text-anchor="middle" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="10.5" fill="#746C67">미리 자른 색종이·패턴지 24장</text>
+  </g>
+</g>
+
+<!-- 5 스티커 시트 -->
+<g transform="rotate(-2 485 520)">
+  <g filter="url(#sh)"><g filter="url(#paper)"><rect x="384" y="372" width="206" height="282" rx="8" fill="#FFFDF8"/></g></g>
+  <rect x="384" y="372" width="206" height="282" rx="8" fill="url(#gloss)"/>
+  <text x="400" y="396" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="10" fill="#9A8F84" letter-spacing="2">TASTE STICKERS · 18</text>
+  <g filter="url(#shs)" stroke="#fff" stroke-width="4" stroke-linejoin="round">
+    <polygon points="428.0,414.0 434.5,429.1 450.8,430.6 438.5,441.4 442.1,457.4 428.0,449.0 413.9,457.4 417.5,441.4 405.2,430.6 421.5,429.1" fill="#F5D66C"/>
+    <path d="M482 452 c-22 -16 -22 -36 -6 -38 c8 -1 12 6 12 6 c0 0 4 -7 12 -6 c16 2 16 22 -6 38 z" fill="#F6D5C5"/>
+    <circle cx="552" cy="434" r="20" fill="#D9C5EE"/>
+    <path d="M404 500 q30 -34 60 0 q-30 34 -60 0z" fill="#B9DDC7"/>
+    <rect x="486" y="482" width="88" height="34" rx="17" fill="#403B38"/>
+    <path d="M406 560 q-2 -20 18 -20 q4 -14 22 -12 q16 -8 26 8 q18 0 16 18 z" fill="#FBE9DD"/>
+    <polygon points="530.0,546.0 534.1,556.3 545.2,557.1 536.7,564.2 539.4,574.9 530.0,569.0 520.6,574.9 523.3,564.2 514.8,557.1 525.9,556.3" fill="#B9DDC7"/>
+    <circle cx="568" cy="560" r="12" fill="#F5D66C"/>
+    <rect x="404" y="592" width="40" height="40" rx="8" fill="#F6D5C5"/>
+    <polygon points="478.0,598.0 481.5,607.1 491.3,607.7 483.7,613.9 486.2,623.3 478.0,618.0 469.8,623.3 472.3,613.9 464.7,607.7 474.5,607.1" fill="#D9C5EE"/>
+    <circle cx="520" cy="612" r="10" fill="#F6D5C5"/><circle cx="548" cy="614" r="8" fill="#B9DDC7"/><circle cx="570" cy="610" r="7" fill="#F5D66C"/>
+  </g>
+  <text x="530" y="505" text-anchor="middle" font-family="'Batang','AppleMyungjo',Georgia,serif" font-size="15" font-style="italic" fill="#FFF9EF">today</text>
+  <text x="439" y="556" text-anchor="middle" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="9.5" fill="#746C67">오늘의 나</text>
+</g>
+
+<!-- 6 딱풀 -->
+<g transform="rotate(-9 765 350)" filter="url(#sh)">
+  <rect x="640" y="326" width="178" height="48" rx="8" fill="url(#glue)"/>
+  <rect x="812" y="322" width="70" height="56" rx="9" fill="url(#glueCap)"/>
+  <rect x="818" y="330" width="58" height="4" rx="2" fill="#fff" opacity=".35"/>
+  <rect x="690" y="333" width="80" height="34" rx="3" fill="#FFFDF8"/>
+  <text x="730" y="356" text-anchor="middle" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="13" font-weight="700" fill="#403B38">딱풀 8g</text>
+  <rect x="640" y="333" width="178" height="5" fill="#fff" opacity=".4"/>
+</g>
+
+<!-- 7 기록 카드 -->
+<g transform="rotate(3 755 525)" filter="url(#sh)">
+  <g filter="url(#paper)"><rect x="612" y="430" width="290" height="188" rx="6" fill="url(#grid)"/></g>
+  <path d="M612 464 v-28 a6 6 0 0 1 6 -6 h278 a6 6 0 0 1 6 6 v28 z" fill="#B9DDC7"/>
+  <text x="628" y="453" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="13" font-weight="700" fill="#403B38">기록 카드 · RECORD</text>
+  <g font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="11.5" fill="#746C67">
+    <text x="628" y="494">제목</text><text x="628" y="530">날짜</text><text x="628" y="566">오늘의 한 문장</text>
+  </g>
+  <g stroke="#B6AA9A" stroke-width="1"><line x1="664" y1="497" x2="884" y2="497"/><line x1="664" y1="533" x2="884" y2="533"/><line x1="718" y1="569" x2="884" y2="569"/><line x1="628" y1="600" x2="884" y2="600"/></g>
+  <text x="672" y="491" font-family="'Nanum Pen Script','Segoe Print',cursive" font-size="20" fill="#403B38">비 오는 오후의 노랑</text>
+  <text x="672" y="527" font-family="'Nanum Pen Script','Segoe Print',cursive" font-size="18" fill="#403B38">10. 13</text>
+</g>
+
+<!-- 8 스탬프 스티커 -->
+<g filter="url(#sh)">
+  <polygon points="819.2,690.0 815.6,695.1 817.6,701.0 812.7,705.0 813.0,711.2 807.2,713.6 805.7,719.6 799.5,720.3 796.3,725.7 790.1,724.5 785.6,728.8 780.0,726.0 774.4,728.8 769.9,724.5 763.7,725.7 760.5,720.3 754.3,719.6 752.8,713.6 747.0,711.2 747.3,705.0 742.4,701.0 744.4,695.1 740.8,690.0 744.4,684.9 742.4,679.0 747.3,675.0 747.0,668.8 752.8,666.4 754.3,660.4 760.5,659.7 763.7,654.3 769.9,655.5 774.4,651.2 780.0,654.0 785.6,651.2 790.1,655.5 796.3,654.3 799.5,659.7 805.7,660.4 807.2,666.4 813.0,668.8 812.7,675.0 817.6,679.0 815.6,684.9" fill="#F5D66C"/>
+  <circle cx="780" cy="690" r="28" fill="none" stroke="#403B38" stroke-width="1.4" stroke-dasharray="2 3"/>
+  <text x="780" y="686" text-anchor="middle" font-family="'Batang','AppleMyungjo',Georgia,serif" font-size="12" fill="#403B38">No.1</text>
+  <text x="780" y="703" text-anchor="middle" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="9.5" fill="#403B38">콜라주</text>
+</g>
+
+<!-- 9 작은 장식: 마스킹테이프·단추 -->
+<g filter="url(#sh)">
+  <path d="M880 694 L836 730 L850 748 L890 708 Z" fill="#B9DDC7" opacity=".9"/>
+  <circle cx="920" cy="676" r="54" fill="url(#tape)"/>
+  <circle cx="920" cy="676" r="25" fill="#F3EADB"/>
+  <circle cx="920" cy="676" r="25" fill="none" stroke="#D8CBB6" stroke-width="3"/>
+</g>
+<g filter="url(#shs)">
+  <circle cx="660" cy="700" r="17" fill="#F6D5C5"/><circle cx="700" cy="726" r="13" fill="#D9C5EE"/><circle cx="636" cy="738" r="11" fill="#FFFDF8"/>
+  <g fill="#8E7F72"><circle cx="655" cy="695" r="2.2"/><circle cx="665" cy="695" r="2.2"/><circle cx="655" cy="705" r="2.2"/><circle cx="665" cy="705" r="2.2"/>
+  <circle cx="696" cy="726" r="2"/><circle cx="704" cy="726" r="2"/><circle cx="632" cy="738" r="1.8"/><circle cx="640" cy="738" r="1.8"/></g>
+</g>
+<g filter="url(#shs)" transform="rotate(-18 470 708)">
+  <rect x="400" y="696" width="140" height="22" fill="#F6D5C5" opacity=".85"/>
+</g>
+
+<!-- soft window light -->
+<rect width="1000" height="760" fill="url(#light)"/>
+</svg>

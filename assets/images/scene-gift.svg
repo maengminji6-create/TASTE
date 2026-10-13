@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="리본을 묶은 취향 상자와 for you 태그, 선물하는 장면">
+  <defs>
+    <filter id="wash" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="51" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="60" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="grain" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="7" result="w"/>
+      <feDisplacementMap in="SourceGraphic" in2="w" scale="7" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="2" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 2.6 -0.35" result="m"/>
+      <feComposite in="d" in2="m" operator="in"/>
+    </filter>
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="#FFF9EF"/>
+  <g filter="url(#wash)" opacity=".85">
+    <ellipse cx="400" cy="320" rx="300" ry="230" fill="#F6D5C5"/>
+    <ellipse cx="650" cy="470" rx="130" ry="80" fill="#B9DDC7" opacity=".7"/>
+  </g>
+
+  <g filter="url(#grain)">
+    <rect x="250" y="230" width="300" height="230" rx="8" fill="#F5D66C"/>
+    <rect x="235" y="190" width="330" height="60" rx="8" fill="#F8E39A"/>
+    <rect x="385" y="190" width="30" height="270" fill="#D9C5EE"/>
+    <path d="M400 190 C340 120 300 150 330 185 C345 200 380 195 400 190 C420 195 455 200 470 185 C500 150 460 120 400 190 Z" fill="#D9C5EE"/>
+    <g transform="rotate(12 600 260)"><rect x="560" y="220" width="110" height="70" rx="8" fill="#B9DDC7"/></g>
+    <g transform="rotate(-6 150 420)"><rect x="80" y="370" width="150" height="110" rx="6" fill="#FBF1EC"/></g>
+    <circle cx="660" cy="150" r="16" fill="#F5D66C"/>
+    <circle cx="140" cy="200" r="12" fill="#D9C5EE"/>
+  </g>
+
+  <g filter="url(#rough)" fill="none" stroke="#403B38" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" opacity=".82">
+    <rect x="250" y="230" width="300" height="230" rx="8"/>
+    <rect x="235" y="190" width="330" height="60" rx="8"/>
+    <path d="M385 190 v270 M415 190 v270"/>
+    <path d="M400 190 C340 120 300 150 330 185 C345 200 380 195 400 190 C420 195 455 200 470 185 C500 150 460 120 400 190 Z"/>
+    <path d="M395 195 l-30 60 M405 195 l30 60" stroke-width="2.5"/>
+    <g transform="rotate(12 600 260)"><rect x="560" y="220" width="110" height="70" rx="8"/><circle cx="575" cy="255" r="5"/></g>
+    <path d="M552 240 q10 4 16 10" stroke-width="2"/>
+    <g transform="rotate(-6 150 420)"><rect x="80" y="370" width="150" height="110" rx="6"/><path d="M100 430 h110 M100 455 h80" stroke-width="2.2" opacity=".55"/></g>
+    <path d="M660 128 v-14 M660 186 v-14 M638 150 h-14 M696 150 h-14" stroke-width="2.5"/>
+  </g>
+  <g fill="#403B38" opacity=".72">
+    <text x="615" y="262" font-size="20" text-anchor="middle" font-family="Georgia, serif" font-style="italic" transform="rotate(12 600 260)">for you</text>
+    <text x="155" y="408" font-size="15" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" transform="rotate(-6 150 420)">네 취향이 궁금해</text>
+  </g>
+</svg>
